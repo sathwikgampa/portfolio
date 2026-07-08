@@ -91,83 +91,44 @@ function typeEffect() {
 
 typeEffect();
 
-/* ── Particle Canvas ── */
-const canvas = document.getElementById('hero-canvas');
-const ctx = canvas?.getContext('2d');
+/* ── Scroll Progress Floating Button ── */
+const scrollTopBtn = document.getElementById('scroll-to-top');
+const progressCircle = document.querySelector('.progress-ring-circle');
 
-let particles = [];
-let animFrameId;
+if (scrollTopBtn && progressCircle) {
+  const radius = progressCircle.r.baseVal.value;
+  const circumference = 2 * Math.PI * radius; // ~131.95
+  
+  progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
+  progressCircle.style.strokeDashoffset = circumference;
 
-function resizeCanvas() {
-  if (!canvas) return;
-  canvas.width = window.innerWidth;
-  canvas.height = canvas.parentElement?.offsetHeight || window.innerHeight;
-}
+  function updateScrollProgress() {
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    
+    if (scrollHeight > 0) {
+      const percent = Math.min(Math.max(scrollTop / scrollHeight, 0), 1);
+      const offset = circumference - (percent * circumference);
+      progressCircle.style.strokeDashoffset = offset;
+    }
 
-function createParticles() {
-  particles = [];
-  const count = Math.floor((canvas.width * canvas.height) / 18000);
-  for (let i = 0; i < count; i++) {
-    particles.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      radius: Math.random() * 1.5 + 0.3,
-      vx: (Math.random() - 0.5) * 0.3,
-      vy: (Math.random() - 0.5) * 0.3,
-      alpha: Math.random() * 0.5 + 0.1,
-      color: Math.random() > 0.5 ? '0, 212, 255' : '124, 58, 237',
-    });
-  }
-}
-
-function drawParticles() {
-  if (!ctx || !canvas) return;
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  // Draw connections
-  for (let i = 0; i < particles.length; i++) {
-    for (let j = i + 1; j < particles.length; j++) {
-      const dx = particles[i].x - particles[j].x;
-      const dy = particles[i].y - particles[j].y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist < 120) {
-        ctx.beginPath();
-        ctx.moveTo(particles[i].x, particles[i].y);
-        ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = `rgba(0, 212, 255, ${0.08 * (1 - dist / 120)})`;
-        ctx.lineWidth = 0.5;
-        ctx.stroke();
-      }
+    if (scrollTop > 300) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
     }
   }
 
-  // Draw particles
-  particles.forEach(p => {
-    p.x += p.vx;
-    p.y += p.vy;
+  window.addEventListener('scroll', updateScrollProgress);
+  window.addEventListener('resize', updateScrollProgress);
+  
+  updateScrollProgress();
 
-    if (p.x < 0) p.x = canvas.width;
-    if (p.x > canvas.width) p.x = 0;
-    if (p.y < 0) p.y = canvas.height;
-    if (p.y > canvas.height) p.y = 0;
-
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(${p.color}, ${p.alpha})`;
-    ctx.fill();
-  });
-
-  animFrameId = requestAnimationFrame(drawParticles);
-}
-
-if (canvas) {
-  resizeCanvas();
-  createParticles();
-  drawParticles();
-
-  window.addEventListener('resize', () => {
-    resizeCanvas();
-    createParticles();
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
 }
 
