@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Gampa Sathwik — Software Engineer Portfolio</title>
+  <meta name="description"
+    content="Software Engineering student specializing in building scalable web systems, real-time applications, and decentralized platforms. Proficient in React, Node.js, Java, and Python." />
+  <meta name="keywords"
+    content="Gampa Sathwik, Software Engineer, student portfolio, SDE, React, Node.js, Solidity, Python, Java, Socket.IO" />
+  <meta name="author" content="Gampa Sathwik" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gampa Sathwik — SDE Portfolio" />
+  <meta property="og:description"
+    content="Software Engineering student building scalable full-stack applications and real-time systems." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23070b14'/><text x='50%' y='60%' dominant-baseline='middle' text-anchor='middle' font-size='18' fill='%2300d4ff'>GS</text></svg>" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar" aria-label="Primary navigation">
+    <div class="container">
+      <div class="nav-inner">
+
+        <a href="#hero" class="nav-logo" aria-label="Home">
+          &lt;<span>GS</span>/&gt;
+        </a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Achievements</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="assets/resume.pdf" target="_blank" rel="noopener" class="nav-cta" id="nav-resume-btn"
+          aria-label="Download resume">
+          Resume ↗
+        </a>
+
+        <div class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
+    <a href="#hero">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Achievements</a>
+    <a href="#contact">Contact</a>
+    <a href="assets/resume.pdf" target="_blank" rel="noopener" style="color: var(--cyan);">Resume ↗</a>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="hero" id="hero" aria-label="Introduction">
+    <div class="hero-bg"></div>
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="hero-content">
+
+        <!-- Left: Text -->
+        <div class="hero-text">
+          <div class="hero-badge" aria-label="Status badge">
+            <span class="dot" aria-hidden="true"></span>
+            Open to Software Engineering Internships
+          </div>
+
+          <h1 class="hero-name">
+            Hi, I'm <span class="gradient-text">Gampa&nbsp;Sathwik</span>
+          </h1>
+
+          <p class="hero-title" aria-live="polite">
+            <span id="typed-text">Software Engineering Student</span><span class="typed-cursor"
+              aria-hidden="true"></span>
+          </p>
+
+          <p class="hero-description">
+            Information Technology undergraduate at VNR VJIET. I specialize in building
+            <strong style="color: var(--text-primary);">scalable full-stack web applications, real-time
+              systems,</strong>
+            and clean backends. Passionate about algorithms, performance, and writing production-ready code.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary" id="hero-view-work-btn">
+              <!-- Play icon -->
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M3 2.5a.5.5 0 0 1 .5-.5l9 5a.5.5 0 0 1 0 .87l-9 5A.5.5 0 0 1 3 12.5v-10z" />
+              </svg>
+              View My Work
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gampasathwik2220@gmail.com" target="_blank" rel="noopener" class="btn btn-outline" id="hero-contact-btn">Let's Talk</a>
+          </div>
+
+          <div class="hero-links" role="list" aria-label="External profile links">
+            <a href="https://github.com/sathwikgampa/" target="_blank" rel="noopener" class="hero-link"
+              id="hero-github-link" role="listitem" aria-label="GitHub profile">
+              <!-- GitHub icon -->
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/sathwik-gampa" target="_blank" rel="noopener" class="hero-link"
+              id="hero-linkedin-link" role="listitem" aria-label="LinkedIn profile">
+              <!-- LinkedIn icon -->
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+              LinkedIn
+            </a>
+            <a href="mailto:gampasathwik2220@gmail.com" class="hero-link" id="hero-email-link" role="listitem"
+              aria-label="Send email">
+              <!-- Email icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              Email
+            </a>
+          </div>
+
+          <!-- Stats -->
+          <div class="hero-stats" role="list" aria-label="Portfolio statistics">
+            <div class="hero-stat" role="listitem">
+              <span class="hero-stat-num" id="stat-projects" data-target="4" data-suffix="+">4+</span>
+              <span class="hero-stat-label">Projects Built</span>
+            </div>
+            <div class="hero-stat" role="listitem">
+              <span class="hero-stat-num" id="stat-commits" data-target="200" data-suffix="+">200+</span>
+              <span class="hero-stat-label">Git Commits</span>
+            </div>
+            <div class="hero-stat" role="listitem">
+              <span class="hero-stat-num" id="stat-problems" data-target="1412" data-suffix="">1412</span>
+              <span class="hero-stat-label">LeetCode Rating</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Avatar -->
+        <div class="hero-avatar-wrap">
+          <div class="hero-avatar-ring" aria-hidden="true"></div>
+          <img src="assets/avatar.png" alt="Gampa Sathwik — Software Engineering Student" class="hero-avatar"
+            id="hero-avatar-img" loading="eager" />
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-indicator" aria-label="Scroll down">
+      <div class="scroll-mouse">
+        <div class="scroll-dot"></div>
+      </div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       PROJECTS
+  ═══════════════════════════════════════════ -->
+  <section class="projects" id="projects" aria-label="Projects">
+    <div class="container">
+
+      <div class="projects-header">
+        <div class="section-label reveal">
+          featured work
+        </div>
+        <h2 class="section-title reveal reveal-delay-1">
+          Projects That <span class="gradient-text">Actually Ship</span>
+        </h2>
+        <p class="section-subtitle reveal reveal-delay-2">
+          Real-world problems solved with clean, production-ready code.
+          Proven implementations showing strong algorithmic thinking and design.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- ── PROJECT 1: College Bus Tracking ── -->
+        <article class="project-card reveal" id="project-bus"
+          aria-label="College Bus Tracking and Attendance Management System">
+          <div class="project-card-inner">
+            <div class="project-visual" aria-hidden="true">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span class="terminal-dot red"></span>
+                  <span class="terminal-dot yellow"></span>
+                  <span class="terminal-dot green"></span>
+                </div>
+                <span class="terminal-title">live-tracker.sh</span>
+                <span></span>
+              </div>
+              <div class="terminal-body">
+                <div class="terminal-line"><span class="terminal-cmd">npm run dev:backend</span></div>
+                <div class="terminal-line"><span class="terminal-output">[Redis] Connected to caching instance</span></div>
+                <div class="terminal-line"><span class="terminal-output">[Socket.IO] Listening on port 5000</span></div>
+                <div class="terminal-line"><span class="terminal-output">[ETA Engine] Computing Dijkstra routes...</span></div>
+                <div class="terminal-line"><span class="terminal-success">✓ Map routes compiled (14 vertices, 28 edges)</span></div>
+                <div class="terminal-line"><span class="terminal-output">Bus 12 tracking active: bearing=184.2, speed=42km/h</span></div>
+                <div class="terminal-line"><span class="terminal-success">[Attendance] Locked checkpoint: Route A Stop 4</span></div>
+                <div class="terminal-line"><span class="terminal-cmd">curl -s http://localhost:5000/api/bus/12/status</span></div>
+                <div class="terminal-line"><span class="terminal-output">{ "busId": 12, "eta_minutes": 8.4, "status": "LOCKED" }</span></div>
+              </div>
+            </div>
+            <div class="project-info">
+              <p class="project-num">// 01</p>
+              <h3 class="project-title">College Bus Tracking &amp; Attendance Management</h3>
+
+              <p class="project-problem">⚡ The Problem</p>
+              <p class="project-desc">
+                Manual attendance taking is highly prone to proxy records and late submissions. Meanwhile, students lack
+                high-accuracy, real-time visibility on college bus routing and live ETAs.
+              </p>
+
+              <div class="project-highlight">
+                <strong>→</strong>
+                Implemented <strong>Dijkstra's Algorithm</strong> and <strong>Haversine Formula</strong> for
+                shortest-path distance and dynamic ETA calculations. Developed real-time tracking with <strong>Socket.IO
+                  &amp; Linear Interpolation (LERP)</strong> for smooth vehicle markers, caching telemetry with
+                <strong>Redis</strong> for instant map loads.
+              </div>
+
+              <div class="project-stack" role="list" aria-label="Tech stack">
+                <span class="stack-tag">Node.js</span>
+                <span class="stack-tag">Express.js</span>
+                <span class="stack-tag">Socket.IO</span>
+                <span class="stack-tag">Redis</span>
+                <span class="stack-tag">SQLite</span>
+                <span class="stack-tag">React.js</span>
+                <span class="stack-tag">Vite</span>
+                <span class="stack-tag">Leaflet</span>
+                <span class="stack-tag">Tailwind CSS</span>
+              </div>
+
+              <div class="project-links">
+                <a href="https://github.com/sathwikgampa/College-Bus-Tracking-Attendance-System" target="_blank"
+                  rel="noopener" class="btn btn-outline" id="proj1-github-btn"
+                  aria-label="View Bus Tracking project on GitHub">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                  GitHub
+                </a>
+                <a href="https://college-bus-tracking-attendance-system.onrender.com/login" target="_blank"
+                  rel="noopener" class="btn btn-ghost" id="proj1-demo-btn"
+                  aria-label="View live demo of Bus Tracking system">Live Demo →</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── PROJECT 2: Cynx-YouthLink ── -->
+        <article class="project-card reverse reveal reveal-delay-1" id="project-cynx"
+          aria-label="Cynx-YouthLink project">
+          <div class="project-card-inner">
+            <div class="project-visual" aria-hidden="true">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span class="terminal-dot red"></span>
+                  <span class="terminal-dot yellow"></span>
+                  <span class="terminal-dot green"></span>
+                </div>
+                <span class="terminal-title">cynx-model-triage.py</span>
+                <span></span>
+              </div>
+              <div class="terminal-body">
+                <div class="terminal-line"><span class="terminal-cmd">python3 main.py --predict</span></div>
+                <div class="terminal-line"><span class="terminal-output">Loading UIE v4.0 Classifier Model...</span></div>
+                <div class="terminal-line"><span class="terminal-success">✓ Model loaded in 842ms on FastAPI backend</span></div>
+                <div class="terminal-line"><span class="terminal-output">Listening on WebSocket endpoint /ws/chat</span></div>
+                <div class="terminal-line"><span class="terminal-cmd">tail -f security.log</span></div>
+                <div class="terminal-line"><span class="terminal-accent">[Safety-Switch] KeyTrigger [Ctrl+Q] detected</span></div>
+                <div class="terminal-line"><span class="terminal-accent">[Safety-Switch] Executing redirect to google.com</span></div>
+                <div class="terminal-line"><span class="terminal-success">[Encryption] AES-256 handshake client-id 9f82 active</span></div>
+                <div class="terminal-line"><span class="terminal-output">[Triage Engine] Score: 0.94 - HIGH PRIORITY flagged</span></div>
+              </div>
+            </div>
+            <div class="project-info">
+              <p class="project-num">// 02</p>
+              <h3 class="project-title">Cynx-YouthLink (Mental Health Ecosystem)</h3>
+
+              <p class="project-problem">⚡ The Problem</p>
+              <p class="project-desc">
+                Over 90% of adolescents in low-income regions lack immediate psychiatric outreach. Stigma, privacy
+                concerns, and slow triage mechanisms prevent them from accessing help.
+              </p>
+
+              <div class="project-highlight">
+                <strong>→</strong>
+                Recognized as a <strong>Top Performer at CVR Hackathon</strong>. Built a <strong>"Safety
+                  Switch"</strong> instant privacy feature (Ctrl+Q redirect), a User Intelligence Engine (UIE) v4.0 for
+                query analytics, an automated emotional triage model powered by <strong>FastAPI</strong>, and real-time
+                end-to-end encrypted messaging.
+              </div>
+
+              <div class="project-stack" role="list" aria-label="Tech stack">
+                <span class="stack-tag">HTML5</span>
+                <span class="stack-tag">JavaScript</span>
+                <span class="stack-tag">Tailwind CSS</span>
+                <span class="stack-tag">Node.js</span>
+                <span class="stack-tag">FastAPI</span>
+                <span class="stack-tag">PostgreSQL</span>
+                <span class="stack-tag">WebSockets</span>
+              </div>
+
+              <div class="project-links">
+                <a href="https://github.com/sathwikgampa/Cynx-YouthLink" target="_blank" rel="noopener"
+                  class="btn btn-outline" id="proj2-github-btn" aria-label="View Cynx-YouthLink on GitHub">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                  GitHub
+                </a>
+                <a href="https://cynx-youth-link.vercel.app" target="_blank" rel="noopener" class="btn btn-ghost"
+                  id="proj2-demo-btn" aria-label="View live demo of Cynx-YouthLink">Live Demo →</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── PROJECT 3: Smart Contracts Escrow ── -->
+        <article class="project-card reveal reveal-delay-2" id="project-escrow"
+          aria-label="Decentralized Freelance Escrow & Payment Platform">
+          <div class="project-card-inner">
+            <div class="project-visual" aria-hidden="true">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span class="terminal-dot red"></span>
+                  <span class="terminal-dot yellow"></span>
+                  <span class="terminal-dot green"></span>
+                </div>
+                <span class="terminal-title">Escrow.sol</span>
+                <span></span>
+              </div>
+              <div class="terminal-body">
+                <div class="terminal-line"><span class="terminal-cmd">npx hardhat compile</span></div>
+                <div class="terminal-line"><span class="terminal-output">Compiling 3 Solidity source files...</span></div>
+                <div class="terminal-line"><span class="terminal-success">✓ Compiled successfully (0.8.20 target)</span></div>
+                <div class="terminal-line"><span class="terminal-cmd">npx hardhat run scripts/deploy.js --network sepolia</span></div>
+                <div class="terminal-line"><span class="terminal-output">Deploying contract FreelanceEscrow...</span></div>
+                <div class="terminal-line"><span class="terminal-success">✓ Contract deployed to: 0x7a25...4b8e</span></div>
+                <div class="terminal-line"><span class="terminal-output">Gas consumed: 842,914 gwei</span></div>
+                <div class="terminal-line"><span class="terminal-cmd">ethers.contract.getAgreementState()</span></div>
+                <div class="terminal-line"><span class="terminal-output">State: 2 (WORK_COMPLETED_CONFIRMED)</span></div>
+                <div class="terminal-line"><span class="terminal-success">[Sepolia] Multi-sig transfer payout finalized</span></div>
+              </div>
+            </div>
+            <div class="project-info">
+              <p class="project-num">// 03</p>
+              <h3 class="project-title">Freelance Escrow Smart Contract Platform</h3>
+
+              <p class="project-problem">⚡ The Problem</p>
+              <p class="project-desc">
+                Centralized freelance networks demand exorbitant transaction cuts (up to 20%) and serve as central
+                failure points for funds locks and dispute resolutions.
+              </p>
+
+              <div class="project-highlight">
+                <strong>→</strong>
+                Developed a Web3 freelance escrow platform using <strong>Solidity Smart Contracts</strong> managing
+                transaction states (Created, In Progress, Completed, Disputed, Refunded). Successfully deployed to the
+                <strong>Sepolia Testnet</strong>, bridging MetaMask wallet authentication and direct ledger calls with
+                <strong>Ethers.js</strong>.
+              </div>
+
+              <div class="project-stack" role="list" aria-label="Tech stack">
+                <span class="stack-tag">Solidity</span>
+                <span class="stack-tag">Ethers.js</span>
+                <span class="stack-tag">JavaScript</span>
+                <span class="stack-tag">HTML5</span>
+                <span class="stack-tag">CSS3</span>
+                <span class="stack-tag">Sepolia Testnet</span>
+              </div>
+
+              <div class="project-links">
+                <a href="https://github.com/sathwikgampa/Smart-Contracts" target="_blank" rel="noopener"
+                  class="btn btn-outline" id="proj3-github-btn" aria-label="View Smart Contracts project on GitHub">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                  GitHub
+                </a>
+                <a href="https://freelancesmartagreement.vercel.app/" target="_blank" rel="noopener"
+                  class="btn btn-ghost" id="proj3-demo-btn" aria-label="View live demo of Escrow system">Live Demo →</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SKILLS
+  ═══════════════════════════════════════════ -->
+  <section class="skills" id="skills" aria-label="Technical skills">
+    <div class="container">
+
+      <div class="skills-header">
+        <div class="section-label reveal">technical skills</div>
+        <h2 class="section-title reveal reveal-delay-1">
+          My <span class="gradient-text">Tech Stack</span>
+        </h2>
+        <p class="section-subtitle reveal reveal-delay-2">
+          Tools and technologies I work with — grouped so a recruiter can scan this in under 5 seconds.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-card reveal" id="skill-languages" aria-label="Programming languages">
+          <span class="skill-card-icon" aria-hidden="true">💬</span>
+          <p class="skill-card-title">Languages</p>
+          <div class="skill-tags" role="list">
+            <span class="skill-tag" role="listitem">Java</span>
+            <span class="skill-tag" role="listitem">Python</span>
+            <span class="skill-tag" role="listitem">JavaScript</span>
+            <span class="skill-tag" role="listitem">TypeScript</span>
+            <span class="skill-tag" role="listitem">Solidity</span>
+            <span class="skill-tag" role="listitem">C</span>
+            <span class="skill-tag" role="listitem">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal reveal-delay-1" id="skill-frameworks" aria-label="Frameworks and libraries">
+          <span class="skill-card-icon" aria-hidden="true">⚛️</span>
+          <p class="skill-card-title">Frameworks &amp; Libraries</p>
+          <div class="skill-tags" role="list">
+            <span class="skill-tag violet" role="listitem">React.js</span>
+            <span class="skill-tag violet" role="listitem">Next.js</span>
+            <span class="skill-tag violet" role="listitem">Node.js</span>
+            <span class="skill-tag violet" role="listitem">Express.js</span>
+            <span class="skill-tag violet" role="listitem">FastAPI</span>
+            <span class="skill-tag violet" role="listitem">Socket.IO</span>
+            <span class="skill-tag violet" role="listitem">Ethers.js</span>
+            <span class="skill-tag violet" role="listitem">Zustand</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal reveal-delay-2" id="skill-databases" aria-label="Databases and tools">
+          <span class="skill-card-icon" aria-hidden="true">🗄️</span>
+          <p class="skill-card-title">Databases &amp; Tools</p>
+          <div class="skill-tags" role="list">
+            <span class="skill-tag green" role="listitem">PostgreSQL</span>
+            <span class="skill-tag green" role="listitem">MySQL</span>
+            <span class="skill-tag green" role="listitem">SQLite</span>
+            <span class="skill-tag green" role="listitem">Redis</span>
+            <span class="skill-tag green" role="listitem">MongoDB</span>
+            <span class="skill-tag green" role="listitem">Firebase</span>
+            <span class="skill-tag green" role="listitem">Git &amp; GitHub</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal reveal-delay-3" id="skill-fundamentals"
+          aria-label="Computer science fundamentals">
+          <span class="skill-card-icon" aria-hidden="true">🧠</span>
+          <p class="skill-card-title">CS Fundamentals</p>
+          <div class="skill-tags" role="list">
+            <span class="skill-tag" role="listitem">Data Structures &amp; Algorithms</span>
+            <span class="skill-tag" role="listitem">Object Oriented Programming (OOP)</span>
+            <span class="skill-tag" role="listitem">DBMS (Database Systems)</span>
+            <span class="skill-tag" role="listitem">Operating Systems</span>
+            <span class="skill-tag" role="listitem">System Design</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       EXPERIENCE / ACHIEVEMENTS
+  ═══════════════════════════════════════════ -->
+  <section class="experience" id="experience" aria-label="Technical achievements">
+    <div class="container">
+
+      <div class="exp-header">
+        <div class="section-label reveal">achievements</div>
+        <h2 class="section-title reveal reveal-delay-1">
+          Technical <span class="gradient-text">Leadership &amp; Wins</span>
+        </h2>
+        <p class="section-subtitle reveal reveal-delay-2">
+          What I've done beyond standard coursework to prove engineering competency.
+        </p>
+      </div>
+
+      <div class="exp-grid">
+
+        <div class="exp-card reveal" id="exp-dsa" aria-label="DSA achievement">
+          <div class="exp-icon cyan" aria-hidden="true">⚔️</div>
+          <div class="exp-content">
+            <p class="exp-type">Competitive Programming</p>
+            <p class="exp-title">LeetCode Max Rating: 1412 &amp; CodeChef Div 4</p>
+            <p class="exp-desc">
+              Active participant in global coding contests, focusing on optimization, problem-solving, and time-bound
+              algorithmic logic.
+            </p>
+          </div>
+        </div>
+
+        <div class="exp-card reveal reveal-delay-1" id="exp-opensource" aria-label="Open source contribution">
+          <div class="exp-icon violet" aria-hidden="true">🌐</div>
+          <div class="exp-content">
+            <p class="exp-type">Open Source</p>
+            <p class="exp-title">200+ Git Commits &amp; Contributions</p>
+            <p class="exp-desc">
+              Active developer on GitHub, maintaining clean repository structures, architectural workflows, and clear
+              markdown documentation.
+            </p>
+          </div>
+        </div>
+
+        <div class="exp-card reveal reveal-delay-2" id="exp-hackathon" aria-label="Hackathon achievement">
+          <div class="exp-icon orange" aria-hidden="true">🏆</div>
+          <div class="exp-content">
+            <p class="exp-type">Hackathon</p>
+            <p class="exp-title">CVR College Hackathon — Top Performer</p>
+            <p class="exp-desc">
+              Built and deployed <em>Cynx-YouthLink</em>, a digital mental health platform with real-time encrypted
+              messaging, user analytics engines, and emergency safety exit switches.
+            </p>
+          </div>
+        </div>
+
+        <div class="exp-card reveal reveal-delay-3" id="exp-cert" aria-label="Professional Certifications">
+          <div class="exp-icon green" aria-hidden="true">📜</div>
+          <div class="exp-content">
+            <p class="exp-type">Certifications</p>
+            <p class="exp-title">OCI Generative AI Professional &amp; Cybersecurity</p>
+            <p class="exp-desc">
+              Oracle Certified Generative AI Professional, alongside completion of AIG Cybersecurity simulation
+              workflows mapping practical engineering safeguards.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════════ -->
+  <section class="contact" id="contact" aria-label="Contact section">
+    <div class="container">
+      <div class="contact-inner">
+        <span class="contact-emoji reveal" aria-hidden="true">👋</span>
+
+        <h2 class="contact-title reveal reveal-delay-1">
+          Let's Build <span class="gradient-text">Something Real</span>
+        </h2>
+
+        <p class="contact-subtitle reveal reveal-delay-2">
+          I am looking for SDE internship opportunities where I can apply my systems thinking and full-stack
+          capabilities to production code.
+        </p>
+
+        <div class="contact-links reveal reveal-delay-3">
+          <a href="mailto:gampasathwik2220@gmail.com" class="contact-link" id="contact-email-btn"
+            aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            gampasathwik2220@gmail.com
+          </a>
+          <a href="https://github.com/sathwikgampa/" target="_blank" rel="noopener" class="contact-link"
+            id="contact-github-btn" aria-label="GitHub profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+            </svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/sathwik-gampa" target="_blank" rel="noopener" class="contact-link"
+            id="contact-linkedin-btn" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+            LinkedIn
+          </a>
+          <a href="assets/resume.pdf" target="_blank" rel="noopener" class="contact-link" id="contact-resume-btn"
+            aria-label="Download resume PDF">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
+            </svg>
+            Resume (PDF)
+          </a>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <span>© 2026 Gampa Sathwik. All rights reserved. Built with vanilla HTML/CSS/JS.</span>
+          <a href="#hero" aria-label="Back to top">Back to top ↑</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Script -->
+  <script src="script.js" defer></script>
+</body>
+
+</html>
