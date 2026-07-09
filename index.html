@@ -21,9 +21,9 @@
 
   <!-- Favicon -->
   <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23070b14'/><text x='50%' y='60%' dominant-baseline='middle' text-anchor='middle' font-size='18' fill='%2300d4ff'>GS</text></svg>" />
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230F172A'/><text x='50%' y='60%' dominant-baseline='middle' text-anchor='middle' font-size='18' fill='%232563EB' font-weight='bold'>GS</text></svg>" />
 
-  <!-- Font Awesome Icons -->
+  <!-- Font Awesome Icons (only for clean interface actions/links) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <!-- Stylesheet -->
@@ -32,29 +32,30 @@
 
 <body>
 
-  <!-- ═══════════════════════════════════════════
-       NAVBAR
-  ═══════════════════════════════════════════ -->
+  <!-- ============================================================
+       NAVIGATION BAR
+       ============================================================ -->
   <nav class="navbar" id="navbar" aria-label="Primary navigation">
     <div class="container">
       <div class="nav-inner">
-
-        <a href="#hero" class="nav-logo" aria-label="Home">
+        <a href="#hero" class="nav-logo" aria-label="Gampa Sathwik Home">
           &lt;<span>GS</span>/&gt;
         </a>
 
-        <ul class="nav-links" role="list">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Achievements</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-
-        <a href="assets/resume.pdf" target="_blank" rel="noopener" class="nav-cta" id="nav-resume-btn"
-          aria-label="Download resume">
-          Resume ↗
-        </a>
+        <div class="nav-links-wrapper">
+          <ul class="nav-links" role="list">
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <a href="assets/resume.pdf" target="_blank" rel="noopener" class="nav-cta" id="nav-resume-btn" aria-label="Download resume">
+            Resume
+          </a>
+        </div>
 
         <div class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" role="button" tabindex="0">
           <span></span><span></span><span></span>
@@ -63,70 +64,59 @@
     </div>
   </nav>
 
-  <!-- Mobile Nav -->
+  <!-- Mobile Nav Overlay & Drawer -->
+  <div class="nav-mobile-overlay" id="nav-mobile-overlay"></div>
   <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
-    <a href="#hero">Home</a>
-    <a href="#projects">Projects</a>
+    <a href="#hero" class="active">Home</a>
+    <a href="#about">About</a>
     <a href="#skills">Skills</a>
-    <a href="#experience">Achievements</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
     <a href="#contact">Contact</a>
-    <a href="assets/resume.pdf" target="_blank" rel="noopener" style="color: var(--cyan);">Resume ↗</a>
+    <a href="assets/resume.pdf" target="_blank" rel="noopener" style="color: var(--primary);">Resume</a>
   </nav>
 
 
-  <!-- ═══════════════════════════════════════════
-       HERO
-  ═══════════════════════════════════════════ -->
-  <section class="hero" id="hero" aria-label="Introduction">
-    <div class="hero-bg"></div>
-    <div class="hero-grid" aria-hidden="true"></div>
-
+  <!-- ============================================================
+       HOME (HERO) SECTION
+       ============================================================ -->
+  <section class="hero" id="hero" aria-label="Home / Introduction">
     <div class="container">
       <div class="hero-content">
-
-        <!-- Left: Text -->
-        <div class="hero-text">
+        <div class="hero-text reveal">
           <div class="status-badge" aria-label="Status badge">
             <span class="status-dot" aria-hidden="true"></span>
             Open to Software Engineering Internships
           </div>
 
           <h1 class="hero-name">
-            Hi, I'm <span class="gradient-text">Gampa&nbsp;Sathwik</span>
+            Hi, I'm <span>Gampa Sathwik</span>
           </h1>
 
           <p class="hero-title" aria-live="polite">
-            <span id="typed-text">Software Engineering Student</span><span class="typed-cursor"
-              aria-hidden="true"></span>
+            <span id="typed-text">Software Engineering Student</span><span class="typed-cursor" aria-hidden="true"></span>
           </p>
 
           <p class="hero-description">
-            Information Technology undergraduate at VNR VJIET. I specialize in building
-            <strong style="color: var(--text-primary);">scalable full-stack web applications, real-time
-              systems,</strong>
-            and clean backends. Passionate about algorithms, performance, and writing production-ready code.
+            Information Technology undergraduate at VNR VJIET. I specialize in building scalable full-stack web applications, real-time systems, and clean backends. Passionate about algorithms, performance, and writing production-ready code.
           </p>
 
           <div class="hero-actions-container">
             <div class="hero-actions">
-              <a href="#projects" class="btn btn-primary" id="hero-view-work-btn">
-                <i class="fa-solid fa-play"></i>
+              <a href="#projects" class="btn btn-primary btn-small" id="hero-view-work-btn">
                 View My Work
               </a>
-              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gampasathwik2220@gmail.com" target="_blank"
-                rel="noopener" class="btn btn-outline" id="hero-contact-btn">
-                <i class="fa-solid fa-paper-plane"></i>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gampasathwik2220@gmail.com" target="_blank" rel="noopener" class="btn btn-outline btn-small" id="hero-contact-btn">
                 Let's Talk
               </a>
             </div>
 
-            <div class="hero-social-links" role="list" aria-label="External profile links">
-              <a href="https://github.com/sathwikgampa/" target="_blank" rel="noopener" class="social-icon-btn"
-                id="hero-github-link" role="listitem" aria-label="GitHub profile">
+            <div class="hero-social-links" role="list" aria-label="Profile links">
+              <a href="https://github.com/sathwikgampa/" target="_blank" rel="noopener" class="social-icon-btn" id="hero-github-link" role="listitem" aria-label="GitHub profile">
                 <i class="fa-brands fa-github"></i>
               </a>
-              <a href="https://www.linkedin.com/in/sathwik-gampa" target="_blank" rel="noopener" class="social-icon-btn"
-                id="hero-linkedin-link" role="listitem" aria-label="LinkedIn profile">
+              <a href="https://www.linkedin.com/in/sathwik-gampa" target="_blank" rel="noopener" class="social-icon-btn" id="hero-linkedin-link" role="listitem" aria-label="LinkedIn profile">
                 <i class="fa-brands fa-linkedin"></i>
               </a>
             </div>
@@ -149,221 +139,84 @@
           </div>
         </div>
 
-        <!-- Right: Avatar -->
-        <div class="hero-avatar-wrap">
-          <img src="assets/avatar.png" alt="Gampa Sathwik — Software Engineering Student" class="hero-avatar"
-            id="hero-avatar-img" loading="eager" />
+        <div class="hero-avatar-wrap reveal reveal-delay-1">
+          <img src="assets/avatar.png" alt="Gampa Sathwik" class="hero-avatar" id="hero-avatar-img" loading="eager" />
         </div>
-
-      </div>
-    </div>
-
-    <!-- Scroll hint -->
-    <div class="scroll-indicator" aria-label="Scroll down">
-      <div class="scroll-mouse">
-        <div class="scroll-dot"></div>
-      </div>
-      <span>scroll</span>
-    </div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════
-       PROJECTS
-  ═══════════════════════════════════════════ -->
-  <section class="projects" id="projects" aria-label="Projects">
-    <div class="container">
-
-      <div class="projects-header">
-        <div class="section-label reveal">
-          featured work
-        </div>
-        <h2 class="section-title reveal reveal-delay-1">
-          Projects That <span class="gradient-text">Actually Ship</span>
-        </h2>
-        <p class="section-subtitle reveal reveal-delay-2">
-          Real-world problems solved with clean, production-ready code.
-          Proven implementations showing strong algorithmic thinking and design.
-        </p>
-      </div>
-
-      <div class="projects-grid">
-
-        <!-- ── PROJECT 1: College Bus Tracking ── -->
-        <article class="project-card reveal" id="project-bus"
-          aria-label="College Bus Tracking and Attendance Management System">
-          <div class="project-card-header">
-            <div class="project-icon-badge">
-              <i class="fa-solid fa-bus"></i>
-            </div>
-            <div class="project-meta-top">
-              <span class="project-number">// 01</span>
-              <span class="project-status-tag"><i class="fa-solid fa-circle-check"></i> Live System</span>
-            </div>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-title">College Bus Tracking &amp; Attendance Management</h3>
-
-            <p class="project-problem"><i class="fa-solid fa-triangle-exclamation"></i> The Problem</p>
-            <p class="project-desc">
-              Manual attendance taking is highly prone to proxy records and late submissions. Meanwhile, students lack
-              high-accuracy, real-time visibility on college bus routing and live ETAs.
-            </p>
-
-            <div class="project-highlight">
-              <i class="fa-solid fa-lightbulb"></i>
-              <span>Implemented <strong>Dijkstra's Algorithm</strong> and <strong>Haversine Formula</strong> for
-                shortest paths and dynamic ETA. Real-time LERP tracking via <strong>Socket.IO</strong> and telemetry
-                caching in <strong>Redis</strong>.</span>
-            </div>
-
-            <div class="project-stack" role="list" aria-label="Tech stack">
-              <span class="stack-tag">Node.js</span>
-              <span class="stack-tag">Express.js</span>
-              <span class="stack-tag">Socket.IO</span>
-              <span class="stack-tag">Redis</span>
-              <span class="stack-tag">SQLite</span>
-              <span class="stack-tag">React.js</span>
-              <span class="stack-tag">Vite</span>
-              <span class="stack-tag">Leaflet</span>
-              <span class="stack-tag">Tailwind CSS</span>
-            </div>
-          </div>
-          <div class="project-card-footer">
-            <a href="https://github.com/sathwikgampa/College-Bus-Tracking-Attendance-System" target="_blank"
-              rel="noopener" class="project-btn-link" id="proj1-github-btn"
-              aria-label="View Bus Tracking project on GitHub">
-              <i class="fa-brands fa-github"></i> GitHub
-            </a>
-            <a href="https://college-bus-tracking-attendance-system.onrender.com/login" target="_blank" rel="noopener"
-              class="project-btn-link" id="proj1-demo-btn" aria-label="View live demo of Bus Tracking system">
-              Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-          </div>
-        </article>
-
-        <!-- ── PROJECT 2: Cynx-YouthLink ── -->
-        <article class="project-card reveal reveal-delay-1" id="project-cynx" aria-label="Cynx-YouthLink project">
-          <div class="project-card-header">
-            <div class="project-icon-badge">
-              <i class="fa-solid fa-heart-pulse"></i>
-            </div>
-            <div class="project-meta-top">
-              <span class="project-number">// 02</span>
-              <span class="project-status-tag"><i class="fa-solid fa-globe"></i> Web Platform</span>
-            </div>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-title">Cynx-YouthLink (Mental Health Ecosystem)</h3>
-
-            <p class="project-problem"><i class="fa-solid fa-triangle-exclamation"></i> The Problem</p>
-            <p class="project-desc">
-              Over 90% of adolescents in low-income regions lack immediate psychiatric outreach. Stigma, privacy
-              concerns, and slow triage mechanisms prevent them from accessing help.
-            </p>
-
-            <div class="project-highlight">
-              <i class="fa-solid fa-lightbulb"></i>
-              <span>Designed a <strong>"Safety Switch"</strong> (Ctrl+Q emergency redirect), dynamic emotional triage built on <strong>FastAPI</strong>, and secure end-to-end encryption.</span>
-            </div>
-
-            <div class="project-stack" role="list" aria-label="Tech stack">
-              <span class="stack-tag">HTML5</span>
-              <span class="stack-tag">JavaScript</span>
-              <span class="stack-tag">Tailwind CSS</span>
-              <span class="stack-tag">Node.js</span>
-              <span class="stack-tag">FastAPI</span>
-              <span class="stack-tag">PostgreSQL</span>
-              <span class="stack-tag">WebSockets</span>
-            </div>
-          </div>
-          <div class="project-card-footer">
-            <a href="https://github.com/sathwikgampa/Cynx-YouthLink" target="_blank" rel="noopener"
-              class="project-btn-link" id="proj2-github-btn" aria-label="View Cynx-YouthLink on GitHub">
-              <i class="fa-brands fa-github"></i> GitHub
-            </a>
-            <a href="https://cynx-youth-link.vercel.app" target="_blank" rel="noopener" class="project-btn-link"
-              id="proj2-demo-btn" aria-label="View live demo of Cynx-YouthLink">
-              Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-          </div>
-        </article>
-
-        <!-- ── PROJECT 3: Smart Contracts Escrow ── -->
-        <article class="project-card reveal reveal-delay-2" id="project-escrow"
-          aria-label="Decentralized Freelance Escrow & Payment Platform">
-          <div class="project-card-header">
-            <div class="project-icon-badge">
-              <i class="fa-solid fa-file-contract"></i>
-            </div>
-            <div class="project-meta-top">
-              <span class="project-number">// 03</span>
-              <span class="project-status-tag"><i class="fa-solid fa-cubes"></i> Blockchain</span>
-            </div>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-title">Freelance Escrow Smart Contract Platform</h3>
-
-            <p class="project-problem"><i class="fa-solid fa-triangle-exclamation"></i> The Problem</p>
-            <p class="project-desc">
-              Centralized freelance networks demand exorbitant transaction cuts (up to 20%) and serve as central
-              failure points for funds locks and dispute resolutions.
-            </p>
-
-            <div class="project-highlight">
-              <i class="fa-solid fa-lightbulb"></i>
-              <span>Developed Web3 escrow using <strong>Solidity Smart Contracts</strong> managing workflow transaction
-                states. Integrated MetaMask wallet authorization and ledger communications via
-                <strong>Ethers.js</strong>.</span>
-            </div>
-
-            <div class="project-stack" role="list" aria-label="Tech stack">
-              <span class="stack-tag">Solidity</span>
-              <span class="stack-tag">Ethers.js</span>
-              <span class="stack-tag">JavaScript</span>
-              <span class="stack-tag">HTML5</span>
-              <span class="stack-tag">CSS3</span>
-              <span class="stack-tag">Sepolia Testnet</span>
-            </div>
-          </div>
-          <div class="project-card-footer">
-            <a href="https://github.com/sathwikgampa/Smart-Contracts" target="_blank" rel="noopener"
-              class="project-btn-link" id="proj3-github-btn" aria-label="View Smart Contracts project on GitHub">
-              <i class="fa-brands fa-github"></i> GitHub
-            </a>
-            <a href="https://freelancesmartagreement.vercel.app/" target="_blank" rel="noopener"
-              class="project-btn-link" id="proj3-demo-btn" aria-label="View live demo of Escrow system">
-              Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-          </div>
-        </article>
-
       </div>
     </div>
   </section>
 
 
-  <!-- ═══════════════════════════════════════════
-       SKILLS
-  ═══════════════════════════════════════════ -->
-  <section class="skills" id="skills" aria-label="Technical skills">
+  <!-- ============================================================
+       ABOUT SECTION
+       ============================================================ -->
+  <section class="about" id="about" aria-label="About Gampa Sathwik">
     <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">About Me</span>
+        <h2 class="section-title">Bridging Theory and Practical Architecture</h2>
+        <p class="section-subtitle">A focused look into my academic foundation, software engineering philosophy, and coding journey.</p>
+      </div>
 
-      <div class="skills-header">
-        <div class="section-label reveal">technical skills</div>
-        <h2 class="section-title reveal reveal-delay-1">
-          My <span class="gradient-text">Tech Stack</span>
-        </h2>
-        <p class="section-subtitle reveal reveal-delay-2">
-          Tools and technologies I work with — grouped so a recruiter can scan this in under 5 seconds.
-        </p>
+      <div class="about-content">
+        <div class="about-bio reveal">
+          <p>
+            I am currently pursuing a Bachelor of Technology in Information Technology at Vallurupalli Nageswara Rao Vignana Jyothi Institute of Engineering and Technology (VNR VJIET). From the start, I have focused on understanding how complex systems function, optimizing databases, and engineering robust backend systems that scale.
+          </p>
+          <p>
+            My approach to development centers on efficiency and clean architecture. Whether implementing Dijkstra's algorithm to compute shortest paths for live telemetry tracking or managing states across Solidity smart contracts on decentralized chains, I strive to write readable, performant, and secure code.
+          </p>
+          <p>
+            I enjoy problem-solving under constraints and actively participate in algorithmic challenges. Outside of coursework, I collaborate on open-source repositories and build systems that solve real-world problems.
+          </p>
+        </div>
+
+        <div class="about-highlights reveal reveal-delay-1">
+          <div class="about-highlight-card">
+            <i class="fa-solid fa-graduation-cap about-highlight-icon"></i>
+            <div>
+              <h3 class="about-highlight-title">Academic Foundation</h3>
+              <p class="about-highlight-desc">Information Technology student at VNR VJIET. Core focus on Algorithms, DBMS, Operating Systems, and Distributed Computing.</p>
+            </div>
+          </div>
+
+          <div class="about-highlight-card">
+            <i class="fa-solid fa-code-branch about-highlight-icon"></i>
+            <div>
+              <h3 class="about-highlight-title">Systems &amp; Architecture</h3>
+              <p class="about-highlight-desc">Experienced in developing event-driven, real-time client-server platforms using Node.js, FastAPIs, and WebSockets.</p>
+            </div>
+          </div>
+
+          <div class="about-highlight-card">
+            <i class="fa-solid fa-shield-halved about-highlight-icon"></i>
+            <div>
+              <h3 class="about-highlight-title">Security &amp; Web3</h3>
+              <p class="about-highlight-desc">Hands-on experience writing secure Solidity smart contracts and applying foundational cybersecurity guardrails.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SKILLS SECTION
+       ============================================================ -->
+  <section class="skills" id="skills" aria-label="Technical stack">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Skills Stack</span>
+        <h2 class="section-title">My Technical Capabilities</h2>
+        <p class="section-subtitle">A curated catalog of the languages, frameworks, databases, and computer science concepts I work with.</p>
       </div>
 
       <div class="skills-grid">
-
-        <div class="skill-card reveal" id="skill-languages" aria-label="Programming languages">
-          <span class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-code"></i></span>
-          <p class="skill-card-title">Languages</p>
+        <!-- Programming Languages -->
+        <div class="skill-card reveal">
+          <i class="fa-solid fa-code skill-card-icon"></i>
+          <h3 class="skill-card-title">Languages</h3>
           <div class="skill-tags" role="list">
             <span class="skill-tag" role="listitem">Java</span>
             <span class="skill-tag" role="listitem">Python</span>
@@ -375,185 +228,351 @@
           </div>
         </div>
 
-        <div class="skill-card reveal reveal-delay-1" id="skill-frameworks" aria-label="Frameworks and libraries">
-          <span class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-layer-group"></i></span>
-          <p class="skill-card-title">Frameworks &amp; Libraries</p>
+        <!-- Frameworks & Libraries -->
+        <div class="skill-card reveal reveal-delay-1">
+          <i class="fa-solid fa-layer-group skill-card-icon"></i>
+          <h3 class="skill-card-title">Frameworks &amp; Libraries</h3>
           <div class="skill-tags" role="list">
-            <span class="skill-tag violet" role="listitem">React.js</span>
-            <span class="skill-tag violet" role="listitem">Next.js</span>
-            <span class="skill-tag violet" role="listitem">Node.js</span>
-            <span class="skill-tag violet" role="listitem">Express.js</span>
-            <span class="skill-tag violet" role="listitem">FastAPI</span>
-            <span class="skill-tag violet" role="listitem">Socket.IO</span>
-            <span class="skill-tag violet" role="listitem">Ethers.js</span>
-            <span class="skill-tag violet" role="listitem">Zustand</span>
+            <span class="skill-tag" role="listitem">React.js</span>
+            <span class="skill-tag" role="listitem">Next.js</span>
+            <span class="skill-tag" role="listitem">Node.js</span>
+            <span class="skill-tag" role="listitem">Express.js</span>
+            <span class="skill-tag" role="listitem">FastAPI</span>
+            <span class="skill-tag" role="listitem">Socket.IO</span>
+            <span class="skill-tag" role="listitem">Ethers.js</span>
+            <span class="skill-tag" role="listitem">Zustand</span>
           </div>
         </div>
 
-        <div class="skill-card reveal reveal-delay-2" id="skill-databases" aria-label="Databases and tools">
-          <span class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-database"></i></span>
-          <p class="skill-card-title">Databases &amp; Tools</p>
+        <!-- Databases & Infrastructure Tools -->
+        <div class="skill-card reveal reveal-delay-2">
+          <i class="fa-solid fa-database skill-card-icon"></i>
+          <h3 class="skill-card-title">Databases &amp; Tools</h3>
           <div class="skill-tags" role="list">
-            <span class="skill-tag green" role="listitem">PostgreSQL</span>
-            <span class="skill-tag green" role="listitem">MySQL</span>
-            <span class="skill-tag green" role="listitem">SQLite</span>
-            <span class="skill-tag green" role="listitem">Redis</span>
-            <span class="skill-tag green" role="listitem">MongoDB</span>
-            <span class="skill-tag green" role="listitem">Firebase</span>
-            <span class="skill-tag green" role="listitem">Git &amp; GitHub</span>
+            <span class="skill-tag" role="listitem">PostgreSQL</span>
+            <span class="skill-tag" role="listitem">MySQL</span>
+            <span class="skill-tag" role="listitem">SQLite</span>
+            <span class="skill-tag" role="listitem">Redis</span>
+            <span class="skill-tag" role="listitem">MongoDB</span>
+            <span class="skill-tag" role="listitem">Firebase</span>
+            <span class="skill-tag" role="listitem">Git &amp; GitHub</span>
           </div>
         </div>
 
-        <div class="skill-card reveal reveal-delay-3" id="skill-fundamentals"
-          aria-label="Computer science fundamentals">
-          <span class="skill-card-icon" aria-hidden="true"><i class="fa-solid fa-brain"></i></span>
-          <p class="skill-card-title">CS Fundamentals</p>
+        <!-- Computer Science Fundamentals -->
+        <div class="skill-card reveal reveal-delay-3">
+          <i class="fa-solid fa-gears skill-card-icon"></i>
+          <h3 class="skill-card-title">CS Fundamentals</h3>
           <div class="skill-tags" role="list">
             <span class="skill-tag" role="listitem">Data Structures &amp; Algorithms</span>
-            <span class="skill-tag" role="listitem">Object Oriented Programming (OOP)</span>
-            <span class="skill-tag" role="listitem">DBMS (Database Systems)</span>
+            <span class="skill-tag" role="listitem">OOP Design</span>
+            <span class="skill-tag" role="listitem">Database Systems</span>
             <span class="skill-tag" role="listitem">Operating Systems</span>
-            <span class="skill-tag" role="listitem">System Design</span>
+            <span class="skill-tag" role="listitem">System Design Principles</span>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
 
-  <!-- ═══════════════════════════════════════════
-       EXPERIENCE / ACHIEVEMENTS
-  ═══════════════════════════════════════════ -->
-  <section class="experience" id="experience" aria-label="Technical achievements">
+  <!-- ============================================================
+       EXPERIENCE SECTION
+       ============================================================ -->
+  <section class="experience" id="experience" aria-label="Work Experience & Achievements">
     <div class="container">
-
-      <div class="exp-header">
-        <div class="section-label reveal">achievements</div>
-        <h2 class="section-title reveal reveal-delay-1">
-          Technical <span class="gradient-text">Leadership &amp; Wins</span>
-        </h2>
-        <p class="section-subtitle reveal reveal-delay-2">
-          What I've done beyond standard coursework to prove engineering competency.
-        </p>
+      <div class="section-header reveal">
+        <span class="section-label">Timeline</span>
+        <h2 class="section-title">Engineering Milestones</h2>
+        <p class="section-subtitle">Key technical experiences, hackathons, and open-source contributions showing hands-on proficiency.</p>
       </div>
 
-      <div class="exp-grid">
-
-        <div class="exp-card reveal" id="exp-dsa" aria-label="DSA achievement">
-          <div class="exp-icon cyan" aria-hidden="true"><i class="fa-solid fa-trophy"></i></div>
-          <div class="exp-content">
-            <p class="exp-type">Competitive Programming</p>
-            <p class="exp-title">LeetCode Max Rating: 1412 &amp; CodeChef Div 4</p>
-            <p class="exp-desc">
-              Active participant in global coding contests, focusing on optimization, problem-solving, and time-bound
-              algorithmic logic.
-            </p>
-          </div>
+      <div class="timeline">
+        <!-- Milestone 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-time">Oct 2024 - Present</div>
+          <h3 class="timeline-title">Hackathon Project Lead &amp; SDE</h3>
+          <div class="timeline-org">CVR College Hackathon (Top Performer)</div>
+          <p class="timeline-desc">
+            Led a core engineering team to conceptualize, design, and deploy Cynx-YouthLink (a real-time mental health ecosystem). Engineered WebSockets messaging backends, FastAPI endpoints for triage analysis, and integrated security fail-safes such as emergency route exits.
+          </p>
         </div>
 
-        <div class="exp-card reveal reveal-delay-1" id="exp-opensource" aria-label="Open source contribution">
-          <div class="exp-icon violet" aria-hidden="true"><i class="fa-solid fa-share-nodes"></i></div>
-          <div class="exp-content">
-            <p class="exp-type">Open Source</p>
-            <p class="exp-title">200+ Git Commits &amp; Contributions</p>
-            <p class="exp-desc">
-              Active developer on GitHub, maintaining clean repository structures, architectural workflows, and clear
-              markdown documentation.
-            </p>
-          </div>
+        <!-- Milestone 2 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-time">2023 - Present</div>
+          <h3 class="timeline-title">Open Source Contributor</h3>
+          <div class="timeline-org">GitHub Community</div>
+          <p class="timeline-desc">
+            Contributed to public repositories, focusing on modular architecture, API designs, and database performance optimizations. Authored technical README setups and codebase flow documentation, completing over 200 commits on personal and shared repositories.
+          </p>
         </div>
 
-        <div class="exp-card reveal reveal-delay-2" id="exp-hackathon" aria-label="Hackathon achievement">
-          <div class="exp-icon orange" aria-hidden="true"><i class="fa-solid fa-award"></i></div>
-          <div class="exp-content">
-            <p class="exp-type">Hackathon</p>
-            <p class="exp-title">CVR College Hackathon — Top Performer</p>
-            <p class="exp-desc">
-              Built and deployed <em>Cynx-YouthLink</em>, a digital mental health platform with real-time encrypted
-              messaging, user analytics engines, and emergency safety exit switches.
-            </p>
-          </div>
+        <!-- Milestone 3 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-time">2023 - 2024</div>
+          <h3 class="timeline-title">Full-Stack Developer</h3>
+          <div class="timeline-org">Independent Projects</div>
+          <p class="timeline-desc">
+            Built and shipped several custom web platforms including the College Bus Tracking &amp; Attendance system. Designed shortest-path algorithms using Dijkstra's logic and Haversine formula computation, caching coordinates with Redis, and rendering live vehicles using Leaflet.js.
+          </p>
         </div>
-
-        <div class="exp-card reveal reveal-delay-3" id="exp-cert" aria-label="Professional Certifications">
-          <div class="exp-icon green" aria-hidden="true"><i class="fa-solid fa-certificate"></i></div>
-          <div class="exp-content">
-            <p class="exp-type">Certifications</p>
-            <p class="exp-title">OCI Generative AI Professional &amp; Cybersecurity</p>
-            <p class="exp-desc">
-              Oracle Certified Generative AI Professional, alongside completion of AIG Cybersecurity simulation
-              workflows mapping practical engineering safeguards.
-            </p>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
 
-  <!-- ═══════════════════════════════════════════
-       CONTACT
-  ═══════════════════════════════════════════ -->
-  <section class="contact" id="contact" aria-label="Contact section">
+  <!-- ============================================================
+       PROJECTS SECTION
+       ============================================================ -->
+  <section class="projects" id="projects" aria-label="Featured projects">
     <div class="container">
-      <div class="contact-inner">
-        <span class="contact-emoji reveal" aria-hidden="true">👋</span>
+      <div class="section-header reveal">
+        <span class="section-label">Featured Work</span>
+        <h2 class="section-title">Projects That Ship</h2>
+        <p class="section-subtitle">Real-world implementations that prove architectural, cryptographic, and backend systems thinking.</p>
+      </div>
 
-        <h2 class="contact-title reveal reveal-delay-1">
-          Let's Build <span class="gradient-text">Something Real</span>
-        </h2>
+      <div class="projects-grid">
+        <!-- Project 1: College Bus Tracking -->
+        <article class="project-card reveal" id="project-bus" aria-label="College Bus Tracking and Attendance Management System">
+          <div class="project-card-header">
+            <div class="project-icon-badge">
+              <i class="fa-solid fa-bus"></i>
+            </div>
+            <div class="project-meta-top">
+              <span class="project-number">// 01</span>
+              <span class="project-status">Live System</span>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-title">College Bus Tracking &amp; Attendance Management</h3>
+            <p class="project-desc">
+              Replaces error-prone manual attendance sheets with automated detection. Resolves student visibility gaps by tracking transit vehicles in real-time.
+            </p>
+            <div class="project-highlight">
+              Implements <strong>Dijkstra's Algorithm</strong> &amp; <strong>Haversine Formula</strong>. Coordinates cached in <strong>Redis</strong>, tracked via <strong>Socket.IO</strong>, and displayed on <strong>React/Leaflet</strong>.
+            </div>
+            <div class="project-stack" role="list" aria-label="Tech stack">
+              <span class="stack-tag">Node.js</span>
+              <span class="stack-tag">Express</span>
+              <span class="stack-tag">Socket.IO</span>
+              <span class="stack-tag">Redis</span>
+              <span class="stack-tag">React.js</span>
+              <span class="stack-tag">SQLite</span>
+              <span class="stack-tag">Leaflet</span>
+            </div>
+          </div>
+          <div class="project-card-footer">
+            <a href="https://github.com/sathwikgampa/College-Bus-Tracking-Attendance-System" target="_blank" rel="noopener" class="project-link" id="proj1-github-btn" aria-label="View Bus Tracking project code on GitHub">
+              Code <i class="fa-solid fa-code"></i>
+            </a>
+            <a href="https://college-bus-tracking-attendance-system.onrender.com/login" target="_blank" rel="noopener" class="project-link" id="proj1-demo-btn" aria-label="View live demo of Bus Tracking system">
+              Live <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
 
-        <p class="contact-subtitle reveal reveal-delay-2">
-          I am looking for SDE internship opportunities where I can apply my systems thinking and full-stack
-          capabilities to production code.
-        </p>
+        <!-- Project 2: Cynx-YouthLink -->
+        <article class="project-card reveal reveal-delay-1" id="project-cynx" aria-label="Cynx-YouthLink project">
+          <div class="project-card-header">
+            <div class="project-icon-badge">
+              <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <div class="project-meta-top">
+              <span class="project-number">// 02</span>
+              <span class="project-status web">Web Platform</span>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-title">Cynx-YouthLink (Mental Health Ecosystem)</h3>
+            <p class="project-desc">
+              Solves adolescent mental health outreach constraints in lower-income areas, where stigma and poor scheduling options prevent early clinical intervention.
+            </p>
+            <div class="project-highlight">
+              Integrates <strong>FastAPI</strong> sentiment classification, end-to-end client messaging, and a <strong>"Safety Switch"</strong> key trigger to instantly redirect browser view.
+            </div>
+            <div class="project-stack" role="list" aria-label="Tech stack">
+              <span class="stack-tag">FastAPI</span>
+              <span class="stack-tag">Node.js</span>
+              <span class="stack-tag">PostgreSQL</span>
+              <span class="stack-tag">WebSockets</span>
+              <span class="stack-tag">Tailwind</span>
+            </div>
+          </div>
+          <div class="project-card-footer">
+            <a href="https://github.com/sathwikgampa/Cynx-YouthLink" target="_blank" rel="noopener" class="project-link" id="proj2-github-btn" aria-label="View Cynx-YouthLink code on GitHub">
+              Code <i class="fa-solid fa-code"></i>
+            </a>
+            <a href="https://cynx-youth-link.vercel.app" target="_blank" rel="noopener" class="project-link" id="proj2-demo-btn" aria-label="View live demo of Cynx-YouthLink">
+              Live <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
 
-        <div class="contact-links reveal reveal-delay-3">
-          <a href="mailto:gampasathwik2220@gmail.com" class="contact-link" id="contact-email-btn"
-            aria-label="Send email">
-            <i class="fa-solid fa-envelope"></i>
-            gampasathwik2220@gmail.com
-          </a>
-          <a href="https://github.com/sathwikgampa/" target="_blank" rel="noopener" class="contact-link"
-            id="contact-github-btn" aria-label="GitHub profile">
-            <i class="fa-brands fa-github"></i>
-            GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/sathwik-gampa" target="_blank" rel="noopener" class="contact-link"
-            id="contact-linkedin-btn" aria-label="LinkedIn profile">
-            <i class="fa-brands fa-linkedin"></i>
-            LinkedIn
-          </a>
-          <a href="assets/resume.pdf" target="_blank" rel="noopener" class="contact-link" id="contact-resume-btn"
-            aria-label="Download resume PDF">
-            <i class="fa-solid fa-file-pdf"></i>
-            Resume (PDF)
-          </a>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        <div class="footer-bottom">
-          <span>© 2026 Gampa Sathwik. All rights reserved. Built with vanilla HTML/CSS/JS.</span>
-          <a href="#hero" aria-label="Back to top">Back to top ↑</a>
-        </div>
-
+        <!-- Project 3: Smart Contracts Escrow -->
+        <article class="project-card reveal reveal-delay-2" id="project-escrow" aria-label="Decentralized Freelance Escrow & Payment Platform">
+          <div class="project-card-header">
+            <div class="project-icon-badge">
+              <i class="fa-solid fa-file-contract"></i>
+            </div>
+            <div class="project-meta-top">
+              <span class="project-number">// 03</span>
+              <span class="project-status blockchain">Blockchain</span>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-title">Freelance Escrow Smart Contract Platform</h3>
+            <p class="project-desc">
+              Combats high commissions and single-point-of-failure issues of centralized freelancing hubs via zero-trust, automated contract ledgers.
+            </p>
+            <div class="project-highlight">
+              Built using <strong>Solidity Smart Contracts</strong> on Sepolia testnet. Handles payment workflow state validations and client MetaMask authorization.
+            </div>
+            <div class="project-stack" role="list" aria-label="Tech stack">
+              <span class="stack-tag">Solidity</span>
+              <span class="stack-tag">Ethers.js</span>
+              <span class="stack-tag">Sepolia</span>
+              <span class="stack-tag">JavaScript</span>
+              <span class="stack-tag">HTML5/CSS3</span>
+            </div>
+          </div>
+          <div class="project-card-footer">
+            <a href="https://github.com/sathwikgampa/Smart-Contracts" target="_blank" rel="noopener" class="project-link" id="proj3-github-btn" aria-label="View Smart Contracts code on GitHub">
+              Code <i class="fa-solid fa-code"></i>
+            </a>
+            <a href="https://freelancesmartagreement.vercel.app/" target="_blank" rel="noopener" class="project-link" id="proj3-demo-btn" aria-label="View live demo of Escrow Web3 application">
+              Live <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
 
-  <!-- Floating Scroll to Top Progress Button (21st.dev style) -->
+  <!-- ============================================================
+       CERTIFICATIONS SECTION
+       ============================================================ -->
+  <section class="certifications" id="certifications" aria-label="Professional Certifications">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Credentials</span>
+        <h2 class="section-title">Professional Certifications</h2>
+        <p class="section-subtitle">Verified programs and technical specializations completed outside my engineering coursework.</p>
+      </div>
+
+      <div class="certs-grid">
+        <!-- OCI Generative AI -->
+        <div class="cert-card reveal">
+          <i class="fa-solid fa-wand-magic-sparkles cert-icon" aria-hidden="true"></i>
+          <h3 class="cert-title">OCI Generative AI Professional</h3>
+          <span class="cert-issuer">Oracle Cloud Infrastructure</span>
+          <p class="cert-desc">
+            Comprehensive certification in Large Language Models (LLMs), encoder-decoder architectures, Prompt Engineering, Retrieval-Augmented Generation (RAG), Fine-Tuning strategies, and OCI generative AI API integrations.
+          </p>
+        </div>
+
+        <!-- Cybersecurity -->
+        <div class="cert-card reveal reveal-delay-1">
+          <i class="fa-solid fa-user-shield cert-icon" aria-hidden="true"></i>
+          <h3 class="cert-title">Cybersecurity Simulation Workflows</h3>
+          <span class="cert-issuer">AIG Engineering Simulation</span>
+          <p class="cert-desc">
+            Completed training simulations focused on defensive cybersecurity, corporate asset monitoring, system access controls, security event responses, and identifying system architectural vulnerabilities.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CONTACT SECTION
+       ============================================================ -->
+  <section class="contact" id="contact" aria-label="Contact information and form">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Contact</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Have a question or looking to recruit an intern? Drop a message directly or connect via social networks.</p>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-info reveal">
+          <p class="contact-desc">
+            I am currently open to Software Engineering (SDE) internship opportunities where I can apply backend software engineering principles, distributed systems patterns, and data structures knowledge in production-grade platforms.
+          </p>
+
+          <div class="contact-methods">
+            <a href="mailto:gampasathwik2220@gmail.com" class="contact-method" id="contact-email-btn" aria-label="Send direct email to Gampa Sathwik">
+              <i class="fa-solid fa-envelope"></i>
+              gampasathwik2220@gmail.com
+            </a>
+            <a href="https://github.com/sathwikgampa/" target="_blank" rel="noopener" class="contact-method" id="contact-github-btn" aria-label="Visit Gampa Sathwik GitHub profile">
+              <i class="fa-brands fa-github"></i>
+              github.com/sathwikgampa
+            </a>
+            <a href="https://www.linkedin.com/in/sathwik-gampa" target="_blank" rel="noopener" class="contact-method" id="contact-linkedin-btn" aria-label="Visit Gampa Sathwik LinkedIn profile">
+              <i class="fa-brands fa-linkedin"></i>
+              linkedin.com/in/sathwik-gampa
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal reveal-delay-1" id="contact-form" autocomplete="on">
+          <div class="form-group">
+            <label for="form-name" class="form-label">Full Name</label>
+            <input type="text" id="form-name" class="form-control" name="name" required placeholder="John Doe" />
+          </div>
+
+          <div class="form-group">
+            <label for="form-email" class="form-label">Email Address</label>
+            <input type="email" id="form-email" class="form-control" name="email" required placeholder="john@example.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="form-subject" class="form-label">Subject</label>
+            <input type="text" id="form-subject" class="form-control" name="subject" required placeholder="Project Discussion" />
+          </div>
+
+          <div class="form-group">
+            <label for="form-message" class="form-label">Message</label>
+            <textarea id="form-message" class="form-control" name="message" required placeholder="Hi Sathwik, I'd like to discuss..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="form-submit-btn">
+            Send Message
+          </button>
+
+          <div class="form-feedback" id="form-feedback" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span>&copy; 2026 Gampa Sathwik. All rights reserved. Built with vanilla HTML, CSS, and JS.</span>
+        <div class="footer-bottom-links">
+          <a href="#hero" aria-label="Scroll back to the top of the page">Back to top</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Floating Scroll to Top Progress Button -->
   <button id="scroll-to-top" aria-label="Scroll to top" class="scroll-to-top-btn">
-    <svg class="progress-ring" width="48" height="48">
-      <circle class="progress-ring-circle" stroke="var(--cyan)" stroke-width="3" fill="transparent" r="21" cx="24"
-        cy="24" />
-    </svg>
-    <div class="arrow-container">
-      <i class="fa-solid fa-arrow-up"></i>
-    </div>
+    <i class="fa-solid fa-arrow-up"></i>
   </button>
 
   <!-- Script -->
