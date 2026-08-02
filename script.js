@@ -1,60 +1,85 @@
 // ============================================================
 //  PORTFOLIO SCRIPT
 //  Gampa Sathwik — Software Engineer Portfolio
+//  High-Performance rAF Throttling, Passive Scroll Listeners & Real Form Handler
 // ============================================================
 
 document.addEventListener('DOMContentLoaded', () => {
-  
-  /* ── Navbar Scroll Behavior & Active Link Highlight ── */
+  'use strict';
+
+  // Cache Critical DOM References
   const navbar = document.getElementById('navbar');
-  const navLinks = document.querySelectorAll('.nav-links a');
-  const mobileNavLinks = document.querySelectorAll('.nav-mobile a');
-  const sections = document.querySelectorAll('section[id]');
+  const navLinks = Array.from(document.querySelectorAll('.nav-links a'));
+  const mobileNavLinks = Array.from(document.querySelectorAll('.nav-mobile a'));
+  const sections = Array.from(document.querySelectorAll('section[id]'));
+  const scrollTopBtn = document.getElementById('scroll-to-top');
 
-  function handleNavbarScroll() {
-    // Scrolled class for visual border/bg update
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
+  /* ── Throttled Scroll Engine using requestAnimationFrame (Zero Layout Thrashing) ── */
+  let isTicking = false;
+
+  function updateScrollState() {
+    const scrollY = window.scrollY;
+    const innerHeight = window.innerHeight;
+    const scrollHeight = document.documentElement.scrollHeight;
+
+    // 1. Navbar Scrolled Styling
+    if (navbar) {
+      if (scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }
+
+    // 2. Active Link Highlight Engine
+    let currentSectionId = '';
+    
+    if ((innerHeight + scrollY) >= scrollHeight - 50) {
+      currentSectionId = 'contact';
     } else {
-      navbar.classList.remove('scrolled');
+      for (let i = 0; i < sections.length; i++) {
+        const section = sections[i];
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          currentSectionId = section.getAttribute('id');
+          break;
+        }
+      }
     }
 
-    // Active link highlight based on scroll position
-    let currentSection = '';
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 120;
-      const sectionHeight = section.offsetHeight;
-      if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-        currentSection = section.getAttribute('id');
-      }
-    });
-
-    // Fallback for very bottom of the page
-    if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 50) {
-      currentSection = 'contact';
+    if (currentSectionId) {
+      const activeHash = `#${currentSectionId}`;
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === activeHash);
+      });
+      mobileNavLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === activeHash);
+      });
     }
 
-    // Update desktop nav link active state
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${currentSection}`) {
-        link.classList.add('active');
+    // 3. Floating Scroll-To-Top Button Visibility
+    if (scrollTopBtn) {
+      if (scrollY > 400) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
       }
-    });
+    }
 
-    // Update mobile nav link active state
-    mobileNavLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${currentSection}`) {
-        link.classList.add('active');
-      }
-    });
+    isTicking = false;
   }
 
-  window.addEventListener('scroll', handleNavbarScroll);
-  // Run on load
-  handleNavbarScroll();
+  function onScroll() {
+    if (!isTicking) {
+      window.requestAnimationFrame(updateScrollState);
+      isTicking = true;
+    }
+  }
 
+  // Bind passive listener for max performance on main thread
+  window.addEventListener('scroll', onScroll, { passive: true });
+  updateScrollState();
 
   /* ── Mobile Navigation Drawer ── */
   const hamburger = document.getElementById('nav-hamburger');
@@ -62,201 +87,160 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileOverlay = document.getElementById('nav-mobile-overlay');
 
   function toggleMobileMenu() {
-    hamburger.classList.toggle('open');
-    mobileNav.classList.toggle('open');
-    mobileOverlay.classList.toggle('open');
-    // Toggle scroll lock on body
-    document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    const isOpen = mobileNav?.classList.toggle('open');
+    hamburger?.classList.toggle('open', isOpen);
+    mobileOverlay?.classList.toggle('open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
   }
 
   function closeMobileMenu() {
-    hamburger.classList.remove('open');
-    mobileNav.classList.remove('open');
-    mobileOverlay.classList.remove('open');
+    hamburger?.classList.remove('open');
+    mobileNav?.classList.remove('open');
+    mobileOverlay?.classList.remove('open');
     document.body.style.overflow = '';
   }
 
   hamburger?.addEventListener('click', toggleMobileMenu);
   mobileOverlay?.addEventListener('click', closeMobileMenu);
+  mobileNavLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
 
-  // Close mobile nav on links click
-  document.querySelectorAll('.nav-mobile a').forEach(link => {
-    link.addEventListener('click', closeMobileMenu);
+  /* ── Scroll To Top Smooth Execution ── */
+  scrollTopBtn?.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-
-  /* ── Typing Animation (Hero Subtitle) ── */
-  const phrases = [
-    'Software Engineering Student',
-    'Full-Stack Developer',
-    'AI Systems & Backend Builder',
-    'Open Source Contributor'
-  ];
-
-  let phraseIdx = 0;
-  let charIdx = 0;
-  let isDeleting = false;
+  /* ── Typing Subtitle Animation ── */
   const typingEl = document.getElementById('typed-text');
-
-  function typeEffect() {
-    if (!typingEl) return;
-    const currentPhrase = phrases[phraseIdx];
-
-    if (isDeleting) {
-      typingEl.textContent = currentPhrase.slice(0, charIdx - 1);
-      charIdx--;
-    } else {
-      typingEl.textContent = currentPhrase.slice(0, charIdx + 1);
-      charIdx++;
-    }
-
-    let delay = isDeleting ? 40 : 80;
-
-    if (!isDeleting && charIdx === currentPhrase.length) {
-      delay = 2000; // Pause at end of phrase
-      isDeleting = true;
-    } else if (isDeleting && charIdx === 0) {
-      isDeleting = false;
-      phraseIdx = (phraseIdx + 1) % phrases.length;
-      delay = 400; // Pause before typing next phrase
-    }
-
-    setTimeout(typeEffect, delay);
-  }
-
   if (typingEl) {
+    const phrases = [
+      'Software Engineering Student',
+      'Full-Stack Developer',
+      'AI Systems & Backend Builder',
+      'Open Source Contributor'
+    ];
+    let phraseIdx = 0, charIdx = 0, isDeleting = false;
+
+    function typeEffect() {
+      const currentPhrase = phrases[phraseIdx];
+      typingEl.textContent = isDeleting
+        ? currentPhrase.slice(0, charIdx - 1)
+        : currentPhrase.slice(0, charIdx + 1);
+
+      charIdx += isDeleting ? -1 : 1;
+      let delay = isDeleting ? 40 : 80;
+
+      if (!isDeleting && charIdx === currentPhrase.length) {
+        delay = 2000;
+        isDeleting = true;
+      } else if (isDeleting && charIdx === 0) {
+        isDeleting = false;
+        phraseIdx = (phraseIdx + 1) % phrases.length;
+        delay = 400;
+      }
+
+      setTimeout(typeEffect, delay);
+    }
     typeEffect();
   }
 
-
-  /* ── Floating Scroll-to-Top Button ── */
-  const scrollTopBtn = document.getElementById('scroll-to-top');
-
-  function handleScrollTopVisibility() {
-    if (window.scrollY > 400) {
-      scrollTopBtn.classList.add('visible');
-    } else {
-      scrollTopBtn.classList.remove('visible');
-    }
-  }
-
-  window.addEventListener('scroll', handleScrollTopVisibility);
-
-  scrollTopBtn?.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-
-
   /* ── Scroll Reveal Observer ── */
   const revealEls = document.querySelectorAll('.reveal');
-
-  const revealObserver = new IntersectionObserver((entries) => {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
+        observer.unobserve(entry.target);
       }
     });
-  }, {
-    threshold: 0.08,
-    rootMargin: '0px 0px -20px 0px'
-  });
+  }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
 
   revealEls.forEach(el => revealObserver.observe(el));
-
 
   /* ── Hero Stats Counter Animation ── */
   const statsSection = document.querySelector('.hero-stats');
   const statNumbers = document.querySelectorAll('.hero-stat-num[data-target]');
 
-  function animateCounter(element, target, duration = 1200) {
-    let startTime = null;
-    const suffix = element.getAttribute('data-suffix') || '';
-
-    function step(timestamp) {
-      if (!startTime) startTime = timestamp;
-      const progress = timestamp - startTime;
-      const progressPercent = Math.min(progress / duration, 1);
-      const currentVal = Math.floor(progressPercent * target);
-      
-      element.textContent = currentVal + suffix;
-
-      if (progress < duration) {
-        window.requestAnimationFrame(step);
-      } else {
-        element.textContent = target + suffix;
-      }
-    }
-    
-    window.requestAnimationFrame(step);
-  }
-
   if (statsSection && statNumbers.length > 0) {
-    const statsObserver = new IntersectionObserver((entries) => {
+    const statsObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          statNumbers.forEach(num => {
-            const targetVal = parseInt(num.getAttribute('data-target'), 10);
-            if (!isNaN(targetVal)) {
-              animateCounter(num, targetVal);
-            }
-          });
-          statsObserver.unobserve(entry.target);
+          statNumbers.forEach(num => animateCounter(num));
+          observer.unobserve(entry.target);
         }
       });
-    }, {
-      threshold: 0.5
-    });
+    }, { threshold: 0.4 });
 
     statsObserver.observe(statsSection);
   }
 
+  function animateCounter(el) {
+    const target = parseInt(el.getAttribute('data-target'), 10);
+    const suffix = el.getAttribute('data-suffix') || '';
+    if (isNaN(target)) return;
 
-  /* ── Contact Form Submission Handler ── */
+    const duration = 1200;
+    const startTime = performance.now();
+
+    function step(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const currentVal = Math.floor(progress * target);
+      el.textContent = currentVal + suffix;
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = target + suffix;
+      }
+    }
+    requestAnimationFrame(step);
+  }
+
+  /* ── Production Web3Forms Async Contact Handler ── */
   const contactForm = document.getElementById('contact-form');
   const formSubmitBtn = document.getElementById('form-submit-btn');
   const formFeedback = document.getElementById('form-feedback');
 
-  contactForm?.addEventListener('submit', (e) => {
+  contactForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Disable button & show sending state
     formSubmitBtn.disabled = true;
     formSubmitBtn.textContent = 'Sending Message...';
-    formFeedback.className = 'form-feedback';
     formFeedback.style.display = 'none';
 
-    // Extract form values
-    const name = document.getElementById('form-name').value.trim();
-    const email = document.getElementById('form-email').value.trim();
-    const subject = document.getElementById('form-subject').value.trim();
-    const message = document.getElementById('form-message').value.trim();
+    const formData = new FormData(contactForm);
 
-    // Perform validation
-    if (!name || !email || !subject || !message) {
-      showFeedback('Please fill out all fields.', 'error');
-      return;
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        showFeedback('Message delivered! I will get back to you shortly.', 'success');
+        contactForm.reset();
+      } else {
+        // Fallback for missing key or API limits
+        window.location.href = `mailto:gampasathwik2220@gmail.com?subject=${encodeURIComponent(formData.get('subject') || 'Inquiry')}&body=${encodeURIComponent(formData.get('message') || '')}`;
+        showFeedback('Opening email client...', 'success');
+      }
+    } catch (err) {
+      // Direct mailto fallback on network fail
+      window.location.href = `mailto:gampasathwik2220@gmail.com?subject=Portfolio%20Inquiry&body=${encodeURIComponent(formData.get('message') || '')}`;
+      showFeedback('Redirecting to mail client...', 'success');
+    } finally {
+      formSubmitBtn.disabled = false;
+      formSubmitBtn.innerHTML = 'Send Message <i class="fa-solid fa-paper-plane"></i>';
     }
-
-    // Mock API call to simulate sending message
-    setTimeout(() => {
-      // Simulate success response
-      showFeedback(`Thank you, ${name}! Your message has been sent successfully. I will get back to you shortly.`, 'success');
-      contactForm.reset();
-    }, 1000);
   });
 
   function showFeedback(msg, type) {
+    if (!formFeedback) return;
     formFeedback.textContent = msg;
     formFeedback.className = `form-feedback ${type}`;
     formFeedback.style.display = 'block';
-    
-    // Reset button state
-    formSubmitBtn.disabled = false;
-    formSubmitBtn.textContent = 'Send Message';
   }
 
 });

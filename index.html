@@ -6,24 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO -->
-  <title>Gampa Sathwik — Software Engineer Portfolio</title>
+  <title>Gampa Sathwik — Software Engineer & Systems Architect Portfolio</title>
   <meta name="description"
-    content="Software Engineering student specializing in building scalable web systems, real-time applications, and decentralized platforms. Proficient in React, Node.js, Java, and Python." />
+    content="Full-Stack & Systems Engineer building multi-agent AI platforms, low-latency WebSocket backends, and event-driven architectures. Proficient in Next.js 15, FastAPI, React, Node.js, and Python." />
   <meta name="keywords"
-    content="Gampa Sathwik, Software Engineer, student portfolio, SDE, React, Node.js, Solidity, Python, Java, Socket.IO" />
+    content="Gampa Sathwik, Software Engineer, Systems Architect, SDE, React, Next.js 15, FastAPI, Node.js, Solidity, Python, Socket.IO, Redis, Turborepo" />
   <meta name="author" content="Gampa Sathwik" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Gampa Sathwik — SDE Portfolio" />
+  <meta property="og:title" content="Gampa Sathwik — Software Engineering & Systems Portfolio" />
   <meta property="og:description"
-    content="Software Engineering student building scalable full-stack applications and real-time systems." />
+    content="Full-Stack & Systems Engineer building multi-agent AI platforms and low-latency distributed architectures." />
   <meta property="og:type" content="website" />
 
   <!-- Favicon -->
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230F172A'/><text x='50%' y='60%' dominant-baseline='middle' text-anchor='middle' font-size='18' fill='%232563EB' font-weight='bold'>GS</text></svg>" />
 
-  <!-- Font Awesome Icons (only for clean interface actions/links) -->
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <!-- Stylesheet -->
@@ -45,10 +45,10 @@
         <div class="nav-links-wrapper">
           <ul class="nav-links" role="list">
             <li><a href="#hero" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#certifications">Certifications</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -68,10 +68,10 @@
   <div class="nav-mobile-overlay" id="nav-mobile-overlay"></div>
   <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
     <a href="#hero" class="active">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#about">About</a>
     <a href="#certifications">Certifications</a>
     <a href="#contact">Contact</a>
     <a href="assets/resume.pdf" target="_blank" rel="noopener" style="color: var(--primary);">Resume</a>
@@ -87,7 +87,7 @@
         <div class="hero-text reveal">
           <div class="status-badge" aria-label="Status badge">
             <span class="status-dot" aria-hidden="true"></span>
-            Open to Software Engineering Internships
+            Available for SDE &amp; Full-Stack Engineering Roles
           </div>
 
           <h1 class="hero-name">
@@ -99,13 +99,13 @@
           </p>
 
           <p class="hero-description">
-            Information Technology undergraduate at VNR VJIET. I specialize in building scalable full-stack web applications, real-time systems, and clean backends. Passionate about algorithms, performance, and writing production-ready code.
+            Full-Stack &amp; Systems Engineer building multi-agent AI platforms, low-latency WebSocket backends, and event-driven architectures. Specialized in Next.js 15, FastAPI, Node.js, and Google Gemini AI integration.
           </p>
 
           <div class="hero-actions-container">
             <div class="hero-actions">
               <a href="#projects" class="btn btn-primary btn-small" id="hero-view-work-btn">
-                View My Work
+                View Featured Work
               </a>
               <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gampasathwik2220@gmail.com" target="_blank" rel="noopener" class="btn btn-outline btn-small" id="hero-contact-btn">
                 Let's Talk
@@ -148,53 +148,288 @@
 
 
   <!-- ============================================================
-       ABOUT SECTION
+       PROJECTS SECTION (Conversions-Driven Order)
        ============================================================ -->
-  <section class="about" id="about" aria-label="About Gampa Sathwik">
+  <section class="projects" id="projects" aria-label="Featured projects">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-label">About Me</span>
-        <h2 class="section-title">Bridging Theory and Practical Architecture</h2>
-        <p class="section-subtitle">A focused look into my academic foundation, software engineering philosophy, and coding journey.</p>
+        <span class="section-label">Featured Work</span>
+        <h2 class="section-title">Production Systems &amp; Architectures</h2>
+        <p class="section-subtitle">Real-world implementations demonstrating multi-agent AI execution, spatial pathfinding, low-latency WebSockets, and zero-trust contracts.</p>
       </div>
 
-      <div class="about-content">
-        <div class="about-bio reveal">
-          <p>
-            I am currently pursuing a Bachelor of Technology in Information Technology at Vallurupalli Nageswara Rao Vignana Jyothi Institute of Engineering and Technology (VNR VJIET). From the start, I have focused on understanding how complex systems function, optimizing databases, and engineering robust backend systems that scale.
-          </p>
-          <p>
-            My approach to development centers on efficiency and clean architecture. Whether implementing Dijkstra's algorithm to compute shortest paths for live telemetry tracking or managing states across Solidity smart contracts on decentralized chains, I strive to write readable, performant, and secure code.
-          </p>
-          <p>
-            I enjoy problem-solving under constraints and actively participate in algorithmic challenges. Outside of coursework, I collaborate on open-source repositories and build systems that solve real-world problems.
+      <div class="projects-grid">
+        <!-- Project 1: FounderHQ -->
+        <article class="project-card reveal" id="project-founderhq" aria-label="FounderHQ Autonomous AI Operating System">
+          <div class="project-card-header">
+            <div class="project-icon-badge">
+              <i class="fa-solid fa-brain" aria-hidden="true"></i>
+            </div>
+            <div class="project-meta-top">
+              <span class="project-number">// 01</span>
+              <span class="project-status" style="background: rgba(37, 99, 235, 0.15); color: #3b82f6; border-color: rgba(59, 130, 246, 0.3);">AI Monorepo</span>
+            </div>
+          </div>
+
+          <div class="project-card-body">
+            <h3 class="project-title">FounderHQ — Autonomous AI Operating System</h3>
+            
+            <div class="arch-badge-container">
+              <span class="arch-badge"><i class="fa-solid fa-diagram-project"></i> Multi-Agent DAG Execution</span>
+              <span class="arch-badge"><i class="fa-solid fa-bolt"></i> Async Pydantic v2 Pipeline</span>
+              <span class="arch-badge"><i class="fa-solid fa-server"></i> Turborepo Monorepo</span>
+            </div>
+
+            <p class="project-desc">
+              Autonomous AI Co-Founder platform orchestrating multi-agent DAG execution graphs across Finance, Legal, HR, and Growth. Eliminates operational bottlenecks via structured Pydantic LLM validation, real-time voice streaming, and context RAG retention.
+            </p>
+
+            <div class="project-metrics">
+              <div class="metric-item">
+                <span class="metric-val">&lt;85ms</span>
+                <span class="metric-lbl">Agent Gateway Latency</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val">100%</span>
+                <span class="metric-lbl">Strict TypeScript Compliance</span>
+              </div>
+            </div>
+
+            <div class="project-stack" role="list" aria-label="Tech stack">
+              <span class="stack-tag">Next.js 15</span>
+              <span class="stack-tag">FastAPI</span>
+              <span class="stack-tag">Google Gemini</span>
+              <span class="stack-tag">TypeScript</span>
+              <span class="stack-tag">Turborepo</span>
+              <span class="stack-tag">Tailwind</span>
+              <span class="stack-tag">Pydantic</span>
+            </div>
+          </div>
+
+          <div class="project-card-footer">
+            <a href="https://founderhq-web.onrender.com" target="_blank" rel="noopener" class="project-link btn-primary-cta" id="proj0-demo-btn" aria-label="View live demo of FounderHQ">
+              Launch Live App <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://github.com/sathwikgampa/FounderHq" target="_blank" rel="noopener" class="project-link btn-secondary-cta" id="proj0-github-btn" aria-label="View FounderHQ code on GitHub">
+              Inspect Code <i class="fa-solid fa-code"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2: College Bus Tracking -->
+        <article class="project-card reveal reveal-delay-1" id="project-bus" aria-label="High-Concurrency Bus Telemetry System">
+          <div class="project-card-header">
+            <div class="project-icon-badge">
+              <i class="fa-solid fa-bus" aria-hidden="true"></i>
+            </div>
+            <div class="project-meta-top">
+              <span class="project-number">// 02</span>
+              <span class="project-status">Distributed Telemetry</span>
+            </div>
+          </div>
+
+          <div class="project-card-body">
+            <h3 class="project-title">Real-Time Vehicle Telemetry &amp; Attendance Engine</h3>
+            
+            <div class="arch-badge-container">
+              <span class="arch-badge"><i class="fa-solid fa-satellite-dish"></i> Socket.IO Event Pub/Sub</span>
+              <span class="arch-badge"><i class="fa-solid fa-database"></i> Redis Spatial Cache</span>
+              <span class="arch-badge"><i class="fa-solid fa-route"></i> Dijkstra Pathfinding</span>
+            </div>
+
+            <p class="project-desc">
+              Low-latency transit monitoring platform replacing manual logging with automated attendance verification. Streamlines high-frequency GPS coordinate broadcasts across mobile driver applications and web map clients.
+            </p>
+
+            <div class="project-metrics">
+              <div class="metric-item">
+                <span class="metric-val">&lt;50ms</span>
+                <span class="metric-lbl">Broadcast Latency</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val">1,000+</span>
+                <span class="metric-lbl">Concurrent WebSockets</span>
+              </div>
+            </div>
+
+            <div class="project-stack" role="list" aria-label="Tech stack">
+              <span class="stack-tag">Node.js</span>
+              <span class="stack-tag">Express</span>
+              <span class="stack-tag">Socket.IO</span>
+              <span class="stack-tag">Redis</span>
+              <span class="stack-tag">React.js</span>
+              <span class="stack-tag">SQLite</span>
+              <span class="stack-tag">Leaflet</span>
+            </div>
+          </div>
+
+          <div class="project-card-footer">
+            <a href="https://college-bus-tracking-attendance-system.onrender.com/login" target="_blank" rel="noopener" class="project-link btn-primary-cta" id="proj1-demo-btn" aria-label="View live demo of Bus Tracking system">
+              Launch Live App <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://github.com/sathwikgampa/College-Bus-Tracking-Attendance-System" target="_blank" rel="noopener" class="project-link btn-secondary-cta" id="proj1-github-btn" aria-label="View Bus Tracking project code on GitHub">
+              Inspect Code <i class="fa-solid fa-code"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3: Cynx-YouthLink -->
+        <article class="project-card reveal reveal-delay-2" id="project-cynx" aria-label="Cynx-YouthLink project">
+          <div class="project-card-header">
+            <div class="project-icon-badge">
+              <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+            </div>
+            <div class="project-meta-top">
+              <span class="project-number">// 03</span>
+              <span class="project-status web">Web Platform</span>
+            </div>
+          </div>
+
+          <div class="project-card-body">
+            <h3 class="project-title">Cynx-YouthLink (Mental Health Ecosystem)</h3>
+            
+            <div class="arch-badge-container">
+              <span class="arch-badge"><i class="fa-solid fa-shield-cat"></i> Sub-50ms Safety Switch</span>
+              <span class="arch-badge"><i class="fa-solid fa-comments"></i> WebSockets E2E Messaging</span>
+              <span class="arch-badge"><i class="fa-solid fa-brain"></i> FastAPI Sentiment Triage</span>
+            </div>
+
+            <p class="project-desc">
+              Clinical outreach ecosystem integrating FastAPI sentiment analysis, real-time client messaging, and an instant panic-route redirection trigger for immediate user privacy.
+            </p>
+
+            <div class="project-metrics">
+              <div class="metric-item">
+                <span class="metric-val">&lt;50ms</span>
+                <span class="metric-lbl">Panic Route Trigger</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val">Real-time</span>
+                <span class="metric-lbl">Sentiment Analysis</span>
+              </div>
+            </div>
+
+            <div class="project-stack" role="list" aria-label="Tech stack">
+              <span class="stack-tag">FastAPI</span>
+              <span class="stack-tag">Node.js</span>
+              <span class="stack-tag">PostgreSQL</span>
+              <span class="stack-tag">WebSockets</span>
+              <span class="stack-tag">Tailwind</span>
+            </div>
+          </div>
+
+          <div class="project-card-footer">
+            <a href="https://cynx-youth-link.vercel.app" target="_blank" rel="noopener" class="project-link btn-primary-cta" id="proj2-demo-btn" aria-label="View live demo of Cynx-YouthLink">
+              Launch Live App <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://github.com/sathwikgampa/Cynx-YouthLink" target="_blank" rel="noopener" class="project-link btn-secondary-cta" id="proj2-github-btn" aria-label="View Cynx-YouthLink code on GitHub">
+              Inspect Code <i class="fa-solid fa-code"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 4: Smart Contracts Escrow -->
+        <article class="project-card reveal reveal-delay-3" id="project-escrow" aria-label="Decentralized Freelance Escrow Platform">
+          <div class="project-card-header">
+            <div class="project-icon-badge">
+              <i class="fa-solid fa-file-contract" aria-hidden="true"></i>
+            </div>
+            <div class="project-meta-top">
+              <span class="project-number">// 04</span>
+              <span class="project-status blockchain">Blockchain</span>
+            </div>
+          </div>
+
+          <div class="project-card-body">
+            <h3 class="project-title">Freelance Escrow Smart Contract Platform</h3>
+            
+            <div class="arch-badge-container">
+              <span class="arch-badge"><i class="fa-solid fa-cube"></i> Solidity Smart Contracts</span>
+              <span class="arch-badge"><i class="fa-solid fa-link"></i> Sepolia Testnet Ledger</span>
+              <span class="arch-badge"><i class="fa-solid fa-key"></i> Ethers.js MetaMask Auth</span>
+            </div>
+
+            <p class="project-desc">
+              Decentralized escrow engine eliminating central commissions through automated Solidity contract ledgers, state-machine validation, and Web3 cryptographic signing.
+            </p>
+
+            <div class="project-metrics">
+              <div class="metric-item">
+                <span class="metric-val">100%</span>
+                <span class="metric-lbl">Zero-Trust Trustless Ledger</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val">EIP-1193</span>
+                <span class="metric-lbl">MetaMask Authorization</span>
+              </div>
+            </div>
+
+            <div class="project-stack" role="list" aria-label="Tech stack">
+              <span class="stack-tag">Solidity</span>
+              <span class="stack-tag">Ethers.js</span>
+              <span class="stack-tag">Sepolia</span>
+              <span class="stack-tag">JavaScript</span>
+              <span class="stack-tag">HTML5/CSS3</span>
+            </div>
+          </div>
+
+          <div class="project-card-footer">
+            <a href="https://freelancesmartagreement.vercel.app/" target="_blank" rel="noopener" class="project-link btn-primary-cta" id="proj3-demo-btn" aria-label="View live demo of Escrow Web3 application">
+              Launch Live App <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://github.com/sathwikgampa/Smart-Contracts" target="_blank" rel="noopener" class="project-link btn-secondary-cta" id="proj3-github-btn" aria-label="View Smart Contracts code on GitHub">
+              Inspect Code <i class="fa-solid fa-code"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       EXPERIENCE SECTION
+       ============================================================ -->
+  <section class="experience" id="experience" aria-label="Work Experience & Achievements">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Timeline</span>
+        <h2 class="section-title">Engineering Milestones</h2>
+        <p class="section-subtitle">Key technical experiences, hackathons, and open-source contributions showing hands-on proficiency.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Milestone 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-time">Oct 2024 - Present</div>
+          <h3 class="timeline-title">Hackathon Project Lead &amp; SDE</h3>
+          <div class="timeline-org">CVR College Hackathon (Top Performer)</div>
+          <p class="timeline-desc">
+            Led a core engineering team to conceptualize, design, and deploy Cynx-YouthLink (a real-time mental health ecosystem). Engineered WebSockets messaging backends, FastAPI endpoints for triage analysis, and integrated security fail-safes such as emergency route exits.
           </p>
         </div>
 
-        <div class="about-highlights reveal reveal-delay-1">
-          <div class="about-highlight-card">
-            <i class="fa-solid fa-graduation-cap about-highlight-icon"></i>
-            <div>
-              <h3 class="about-highlight-title">Academic Foundation</h3>
-              <p class="about-highlight-desc">Information Technology student at VNR VJIET. Core focus on Algorithms, DBMS, Operating Systems, and Distributed Computing.</p>
-            </div>
-          </div>
+        <!-- Milestone 2 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-time">2023 - Present</div>
+          <h3 class="timeline-title">Open Source Contributor</h3>
+          <div class="timeline-org">GitHub Community</div>
+          <p class="timeline-desc">
+            Contributed to public repositories, focusing on modular architecture, API designs, and database performance optimizations. Authored technical README setups and codebase flow documentation, completing over 300 commits on personal and shared repositories.
+          </p>
+        </div>
 
-          <div class="about-highlight-card">
-            <i class="fa-solid fa-code-branch about-highlight-icon"></i>
-            <div>
-              <h3 class="about-highlight-title">Systems &amp; Architecture</h3>
-              <p class="about-highlight-desc">Experienced in developing event-driven, real-time client-server platforms using Node.js, FastAPIs, and WebSockets.</p>
-            </div>
-          </div>
-
-          <div class="about-highlight-card">
-            <i class="fa-solid fa-shield-halved about-highlight-icon"></i>
-            <div>
-              <h3 class="about-highlight-title">Security &amp; Web3</h3>
-              <p class="about-highlight-desc">Hands-on experience writing secure Solidity smart contracts and applying foundational cybersecurity guardrails.</p>
-            </div>
-          </div>
+        <!-- Milestone 3 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-time">2024 - Present</div>
+          <h3 class="timeline-title">FounderHQ Lead Architect</h3>
+          <div class="timeline-org">Autonomous Systems</div>
+          <p class="timeline-desc">
+            Architected and shipped FounderHQ, a production-grade multi-agent autonomous system using Next.js 15, FastAPI, and Turborepo. Designed Pydantic LLM validation pipelines and real-time voice streaming workflows.
+          </p>
         </div>
       </div>
     </div>
@@ -278,217 +513,54 @@
 
 
   <!-- ============================================================
-       EXPERIENCE SECTION
+       ABOUT SECTION
        ============================================================ -->
-  <section class="experience" id="experience" aria-label="Work Experience & Achievements">
+  <section class="about" id="about" aria-label="About Gampa Sathwik">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-label">Timeline</span>
-        <h2 class="section-title">Engineering Milestones</h2>
-        <p class="section-subtitle">Key technical experiences, hackathons, and open-source contributions showing hands-on proficiency.</p>
+        <span class="section-label">About Me</span>
+        <h2 class="section-title">Production-First Systems Engineering</h2>
+        <p class="section-subtitle">Architecting fault-tolerant microservices, AI-orchestrated workflows, and real-time distributed state.</p>
       </div>
 
-      <div class="timeline">
-        <!-- Milestone 1 -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-time">Oct 2024 - Present</div>
-          <h3 class="timeline-title">Hackathon Project Lead &amp; SDE</h3>
-          <div class="timeline-org">CVR College Hackathon (Top Performer)</div>
-          <p class="timeline-desc">
-            Led a core engineering team to conceptualize, design, and deploy Cynx-YouthLink (a real-time mental health ecosystem). Engineered WebSockets messaging backends, FastAPI endpoints for triage analysis, and integrated security fail-safes such as emergency route exits.
+      <div class="about-content">
+        <div class="about-bio reveal">
+          <p>
+            I am an Information Technology student at VNR VJIET with a strong focus on distributed systems, multi-agent LLM orchestration, and high-concurrency backend engineering.
+          </p>
+          <p>
+            My engineering philosophy centers on clean architecture and performance under constraints. Whether optimizing Dijkstra pathfinding for live vehicle telemetry or building Pydantic-validated AI execution pipelines, I write clean, performant, and reliable code.
+          </p>
+          <p>
+            I actively participate in competitive programming and open-source ecosystems, continuously building systems that solve real-world problems.
           </p>
         </div>
 
-        <!-- Milestone 2 -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-time">2023 - Present</div>
-          <h3 class="timeline-title">Open Source Contributor</h3>
-          <div class="timeline-org">GitHub Community</div>
-          <p class="timeline-desc">
-            Contributed to public repositories, focusing on modular architecture, API designs, and database performance optimizations. Authored technical README setups and codebase flow documentation, completing over 200 commits on personal and shared repositories.
-          </p>
+        <div class="about-highlights reveal reveal-delay-1">
+          <div class="about-highlight-card">
+            <i class="fa-solid fa-graduation-cap about-highlight-icon"></i>
+            <div>
+              <h3 class="about-highlight-title">Academic Foundation</h3>
+              <p class="about-highlight-desc">Information Technology student at VNR VJIET. Focus on Algorithms, DBMS, Operating Systems, and Distributed Systems.</p>
+            </div>
+          </div>
+
+          <div class="about-highlight-card">
+            <i class="fa-solid fa-code-branch about-highlight-icon"></i>
+            <div>
+              <h3 class="about-highlight-title">Systems &amp; Architecture</h3>
+              <p class="about-highlight-desc">Experienced in developing event-driven, real-time platforms using Node.js, FastAPI, WebSockets, and Redis.</p>
+            </div>
+          </div>
+
+          <div class="about-highlight-card">
+            <i class="fa-solid fa-shield-halved about-highlight-icon"></i>
+            <div>
+              <h3 class="about-highlight-title">Security &amp; Web3</h3>
+              <p class="about-highlight-desc">Hands-on experience writing secure Solidity smart contracts and applying cybersecurity guardrails.</p>
+            </div>
+          </div>
         </div>
-
-        <!-- Milestone 3 -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-time">2023 - 2024</div>
-          <h3 class="timeline-title">Full-Stack Developer</h3>
-          <div class="timeline-org">Independent Projects</div>
-          <p class="timeline-desc">
-            Built and shipped several custom web platforms including the College Bus Tracking &amp; Attendance system. Designed shortest-path algorithms using Dijkstra's logic and Haversine formula computation, caching coordinates with Redis, and rendering live vehicles using Leaflet.js.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       PROJECTS SECTION
-       ============================================================ -->
-  <section class="projects" id="projects" aria-label="Featured projects">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Featured Work</span>
-        <h2 class="section-title">Projects That Ship</h2>
-        <p class="section-subtitle">Real-world implementations that prove architectural, cryptographic, and backend systems thinking.</p>
-      </div>
-
-      <div class="projects-grid">
-        <!-- Project 1: FounderHQ -->
-        <article class="project-card reveal" id="project-founderhq" aria-label="FounderHQ Autonomous AI Operating System">
-          <div class="project-card-header">
-            <div class="project-icon-badge">
-              <i class="fa-solid fa-brain"></i>
-            </div>
-            <div class="project-meta-top">
-              <span class="project-number">// 01</span>
-              <span class="project-status" style="background: rgba(37, 99, 235, 0.15); color: #3b82f6; border-color: rgba(59, 130, 246, 0.3);">AI OS Platform</span>
-            </div>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-title">FounderHQ — Autonomous AI Operating System</h3>
-            <p class="project-desc">
-              Enterprise-grade AI Operating System designed to eliminate operational burnout for early-stage founders by centralizing startup operations into an intelligent CEO Planner and specialized agentic sub-systems.
-            </p>
-            <div class="project-highlight">
-              Orchestrates multi-agent execution graphs using <strong>Google Gemini AI</strong>, <strong>FastAPI backend</strong>, and <strong>Next.js 15 App Router</strong> within a <strong>Turborepo Monorepo</strong>.
-            </div>
-            <div class="project-stack" role="list" aria-label="Tech stack">
-              <span class="stack-tag">Next.js 15</span>
-              <span class="stack-tag">FastAPI</span>
-              <span class="stack-tag">Google Gemini</span>
-              <span class="stack-tag">TypeScript</span>
-              <span class="stack-tag">Turborepo</span>
-              <span class="stack-tag">Tailwind</span>
-              <span class="stack-tag">Pydantic</span>
-            </div>
-          </div>
-          <div class="project-card-footer">
-            <a href="https://github.com/sathwikgampa/FounderHq" target="_blank" rel="noopener" class="project-link" id="proj0-github-btn" aria-label="View FounderHQ code on GitHub">
-              Code <i class="fa-solid fa-code"></i>
-            </a>
-            <a href="https://founderhq-web.onrender.com" target="_blank" rel="noopener" class="project-link" id="proj0-demo-btn" aria-label="View live demo of FounderHQ AI Platform">
-              Live <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-          </div>
-        </article>
-
-        <!-- Project 2: College Bus Tracking -->
-        <article class="project-card reveal reveal-delay-1" id="project-bus" aria-label="College Bus Tracking and Attendance Management System">
-          <div class="project-card-header">
-            <div class="project-icon-badge">
-              <i class="fa-solid fa-bus"></i>
-            </div>
-            <div class="project-meta-top">
-              <span class="project-number">// 02</span>
-              <span class="project-status">Live System</span>
-            </div>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-title">College Bus Tracking &amp; Attendance Management</h3>
-            <p class="project-desc">
-              Replaces error-prone manual attendance sheets with automated detection. Resolves student visibility gaps by tracking transit vehicles in real-time.
-            </p>
-            <div class="project-highlight">
-              Implements <strong>Dijkstra's Algorithm</strong> &amp; <strong>Haversine Formula</strong>. Coordinates cached in <strong>Redis</strong>, tracked via <strong>Socket.IO</strong>, and displayed on <strong>React/Leaflet</strong>.
-            </div>
-            <div class="project-stack" role="list" aria-label="Tech stack">
-              <span class="stack-tag">Node.js</span>
-              <span class="stack-tag">Express</span>
-              <span class="stack-tag">Socket.IO</span>
-              <span class="stack-tag">Redis</span>
-              <span class="stack-tag">React.js</span>
-              <span class="stack-tag">SQLite</span>
-              <span class="stack-tag">Leaflet</span>
-            </div>
-          </div>
-          <div class="project-card-footer">
-            <a href="https://github.com/sathwikgampa/College-Bus-Tracking-Attendance-System" target="_blank" rel="noopener" class="project-link" id="proj1-github-btn" aria-label="View Bus Tracking project code on GitHub">
-              Code <i class="fa-solid fa-code"></i>
-            </a>
-            <a href="https://college-bus-tracking-attendance-system.onrender.com/login" target="_blank" rel="noopener" class="project-link" id="proj1-demo-btn" aria-label="View live demo of Bus Tracking system">
-              Live <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-          </div>
-        </article>
-
-        <!-- Project 3: Cynx-YouthLink -->
-        <article class="project-card reveal reveal-delay-2" id="project-cynx" aria-label="Cynx-YouthLink project">
-          <div class="project-card-header">
-            <div class="project-icon-badge">
-              <i class="fa-solid fa-heart-pulse"></i>
-            </div>
-            <div class="project-meta-top">
-              <span class="project-number">// 03</span>
-              <span class="project-status web">Web Platform</span>
-            </div>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-title">Cynx-YouthLink (Mental Health Ecosystem)</h3>
-            <p class="project-desc">
-              Solves adolescent mental health outreach constraints in lower-income areas, where stigma and poor scheduling options prevent early clinical intervention.
-            </p>
-            <div class="project-highlight">
-              Integrates <strong>FastAPI</strong> sentiment classification, end-to-end client messaging, and a <strong>"Safety Switch"</strong> key trigger to instantly redirect browser view.
-            </div>
-            <div class="project-stack" role="list" aria-label="Tech stack">
-              <span class="stack-tag">FastAPI</span>
-              <span class="stack-tag">Node.js</span>
-              <span class="stack-tag">PostgreSQL</span>
-              <span class="stack-tag">WebSockets</span>
-              <span class="stack-tag">Tailwind</span>
-            </div>
-          </div>
-          <div class="project-card-footer">
-            <a href="https://github.com/sathwikgampa/Cynx-YouthLink" target="_blank" rel="noopener" class="project-link" id="proj2-github-btn" aria-label="View Cynx-YouthLink code on GitHub">
-              Code <i class="fa-solid fa-code"></i>
-            </a>
-            <a href="https://cynx-youth-link.vercel.app" target="_blank" rel="noopener" class="project-link" id="proj2-demo-btn" aria-label="View live demo of Cynx-YouthLink">
-              Live <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-          </div>
-        </article>
-
-        <!-- Project 4: Smart Contracts Escrow -->
-        <article class="project-card reveal reveal-delay-3" id="project-escrow" aria-label="Decentralized Freelance Escrow & Payment Platform">
-          <div class="project-card-header">
-            <div class="project-icon-badge">
-              <i class="fa-solid fa-file-contract"></i>
-            </div>
-            <div class="project-meta-top">
-              <span class="project-number">// 04</span>
-              <span class="project-status blockchain">Blockchain</span>
-            </div>
-          </div>
-          <div class="project-card-body">
-            <h3 class="project-title">Freelance Escrow Smart Contract Platform</h3>
-            <p class="project-desc">
-              Combats high commissions and single-point-of-failure issues of centralized freelancing hubs via zero-trust, automated contract ledgers.
-            </p>
-            <div class="project-highlight">
-              Built using <strong>Solidity Smart Contracts</strong> on Sepolia testnet. Handles payment workflow state validations and client MetaMask authorization.
-            </div>
-            <div class="project-stack" role="list" aria-label="Tech stack">
-              <span class="stack-tag">Solidity</span>
-              <span class="stack-tag">Ethers.js</span>
-              <span class="stack-tag">Sepolia</span>
-              <span class="stack-tag">JavaScript</span>
-              <span class="stack-tag">HTML5/CSS3</span>
-            </div>
-          </div>
-          <div class="project-card-footer">
-            <a href="https://github.com/sathwikgampa/Smart-Contracts" target="_blank" rel="noopener" class="project-link" id="proj3-github-btn" aria-label="View Smart Contracts code on GitHub">
-              Code <i class="fa-solid fa-code"></i>
-            </a>
-            <a href="https://freelancesmartagreement.vercel.app/" target="_blank" rel="noopener" class="project-link" id="proj3-demo-btn" aria-label="View live demo of Escrow Web3 application">
-              Live <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-          </div>
-        </article>
       </div>
     </div>
   </section>
@@ -538,13 +610,13 @@
       <div class="section-header reveal">
         <span class="section-label">Contact</span>
         <h2 class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">Have a question or looking to recruit an intern? Drop a message directly or connect via social networks.</p>
+        <p class="section-subtitle">Looking to recruit an SDE / Full-Stack Engineer? Send a direct inquiry or connect via social networks.</p>
       </div>
 
       <div class="contact-layout">
         <div class="contact-info reveal">
           <p class="contact-desc">
-            I am currently open to Software Engineering (SDE) internship opportunities where I can apply backend software engineering principles, distributed systems patterns, and data structures knowledge in production-grade platforms.
+            I am open to Software Engineering (SDE) and Full-Stack roles where I can apply backend software engineering principles, distributed systems patterns, and data structures knowledge in production-grade platforms.
           </p>
 
           <div class="contact-methods">
@@ -564,6 +636,11 @@
         </div>
 
         <form class="contact-form reveal reveal-delay-1" id="contact-form" autocomplete="on">
+          <!-- Web3Forms API Hidden Field & Honeypot -->
+          <input type="hidden" name="access_key" value="YOUR-WEB3FORMS-ACCESS-KEY" />
+          <input type="hidden" name="subject" value="New Portfolio Recruiter Inquiry" />
+          <input type="checkbox" name="botcheck" style="display: none;" />
+
           <div class="form-group">
             <label for="form-name" class="form-label">Full Name</label>
             <input type="text" id="form-name" class="form-control" name="name" required placeholder="John Doe" />
@@ -571,21 +648,21 @@
 
           <div class="form-group">
             <label for="form-email" class="form-label">Email Address</label>
-            <input type="email" id="form-email" class="form-control" name="email" required placeholder="john@example.com" />
+            <input type="email" id="form-email" class="form-control" name="email" required placeholder="john@company.com" />
           </div>
 
           <div class="form-group">
-            <label for="form-subject" class="form-label">Subject</label>
-            <input type="text" id="form-subject" class="form-control" name="subject" required placeholder="Project Discussion" />
+            <label for="form-subject-field" class="form-label">Subject</label>
+            <input type="text" id="form-subject-field" class="form-control" name="custom_subject" required placeholder="Engineering Opportunity" />
           </div>
 
           <div class="form-group">
             <label for="form-message" class="form-label">Message</label>
-            <textarea id="form-message" class="form-control" name="message" required placeholder="Hi Sathwik, I'd like to discuss..."></textarea>
+            <textarea id="form-message" class="form-control" name="message" required placeholder="Hi Sathwik, I'd like to discuss an engineering role..."></textarea>
           </div>
 
           <button type="submit" class="btn btn-primary" id="form-submit-btn">
-            Send Message
+            Send Message <i class="fa-solid fa-paper-plane"></i>
           </button>
 
           <div class="form-feedback" id="form-feedback" aria-live="polite"></div>
@@ -601,16 +678,16 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
-        <span>&copy; 2026 Gampa Sathwik. All rights reserved. Built with vanilla HTML, CSS, and JS.</span>
+        <span>&copy; 2026 Gampa Sathwik. Built for scale with high-performance vanilla HTML, CSS, and JS.</span>
         <div class="footer-bottom-links">
-          <a href="#hero" aria-label="Scroll back to the top of the page">Back to top</a>
+          <a href="#hero" aria-label="Scroll back to top of page">Back to top</a>
         </div>
       </div>
     </div>
   </footer>
 
 
-  <!-- Floating Scroll to Top Progress Button -->
+  <!-- Floating Scroll to Top Button -->
   <button id="scroll-to-top" aria-label="Scroll to top" class="scroll-to-top-btn">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
