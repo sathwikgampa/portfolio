@@ -125,11 +125,11 @@
           <!-- Stats -->
           <div class="hero-stats" role="list" aria-label="Portfolio statistics">
             <div class="hero-stat" role="listitem">
-              <span class="hero-stat-num" id="stat-projects" data-target="7" data-suffix="+">7+</span>
+              <span class="hero-stat-num" id="stat-projects" data-target="13" data-suffix="+">13+</span>
               <span class="hero-stat-label">Projects Built</span>
             </div>
             <div class="hero-stat" role="listitem">
-              <span class="hero-stat-num" id="stat-commits" data-target="200" data-suffix="+">200+</span>
+              <span class="hero-stat-num" id="stat-commits" data-target="300" data-suffix="+">300+</span>
               <span class="hero-stat-label">Git Commits</span>
             </div>
             <div class="hero-stat" role="listitem">
@@ -234,13 +234,14 @@
           <h3 class="skill-card-title">Frameworks &amp; Libraries</h3>
           <div class="skill-tags" role="list">
             <span class="skill-tag" role="listitem">React.js</span>
-            <span class="skill-tag" role="listitem">Next.js</span>
-            <span class="skill-tag" role="listitem">Node.js</span>
-            <span class="skill-tag" role="listitem">Express.js</span>
+            <span class="skill-tag" role="listitem">Next.js 15</span>
             <span class="skill-tag" role="listitem">FastAPI</span>
+            <span class="skill-tag" role="listitem">Google Gemini AI</span>
+            <span class="skill-tag" role="listitem">Node.js</span>
+            <span class="skill-tag" role="listitem">Turborepo</span>
+            <span class="skill-tag" role="listitem">Express.js</span>
             <span class="skill-tag" role="listitem">Socket.IO</span>
             <span class="skill-tag" role="listitem">Ethers.js</span>
-            <span class="skill-tag" role="listitem">Zustand</span>
           </div>
         </div>
 
@@ -337,14 +338,53 @@
       </div>
 
       <div class="projects-grid">
-        <!-- Project 1: College Bus Tracking -->
-        <article class="project-card reveal" id="project-bus" aria-label="College Bus Tracking and Attendance Management System">
+        <!-- Project 1: FounderHQ -->
+        <article class="project-card reveal" id="project-founderhq" aria-label="FounderHQ Autonomous AI Operating System">
+          <div class="project-card-header">
+            <div class="project-icon-badge">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <div class="project-meta-top">
+              <span class="project-number">// 01</span>
+              <span class="project-status" style="background: rgba(37, 99, 235, 0.15); color: #3b82f6; border-color: rgba(59, 130, 246, 0.3);">AI OS Platform</span>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-title">FounderHQ — Autonomous AI Operating System</h3>
+            <p class="project-desc">
+              Enterprise-grade AI Operating System designed to eliminate operational burnout for early-stage founders by centralizing startup operations into an intelligent CEO Planner and specialized agentic sub-systems.
+            </p>
+            <div class="project-highlight">
+              Orchestrates multi-agent execution graphs using <strong>Google Gemini AI</strong>, <strong>FastAPI backend</strong>, and <strong>Next.js 15 App Router</strong> within a <strong>Turborepo Monorepo</strong>.
+            </div>
+            <div class="project-stack" role="list" aria-label="Tech stack">
+              <span class="stack-tag">Next.js 15</span>
+              <span class="stack-tag">FastAPI</span>
+              <span class="stack-tag">Google Gemini</span>
+              <span class="stack-tag">TypeScript</span>
+              <span class="stack-tag">Turborepo</span>
+              <span class="stack-tag">Tailwind</span>
+              <span class="stack-tag">Pydantic</span>
+            </div>
+          </div>
+          <div class="project-card-footer">
+            <a href="https://github.com/sathwikgampa/FounderHq" target="_blank" rel="noopener" class="project-link" id="proj0-github-btn" aria-label="View FounderHQ code on GitHub">
+              Code <i class="fa-solid fa-code"></i>
+            </a>
+            <a href="https://founderhq-web.onrender.com" target="_blank" rel="noopener" class="project-link" id="proj0-demo-btn" aria-label="View live demo of FounderHQ AI Platform">
+              Live <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2: College Bus Tracking -->
+        <article class="project-card reveal reveal-delay-1" id="project-bus" aria-label="College Bus Tracking and Attendance Management System">
           <div class="project-card-header">
             <div class="project-icon-badge">
               <i class="fa-solid fa-bus"></i>
             </div>
             <div class="project-meta-top">
-              <span class="project-number">// 01</span>
+              <span class="project-number">// 02</span>
               <span class="project-status">Live System</span>
             </div>
           </div>
@@ -376,14 +416,14 @@
           </div>
         </article>
 
-        <!-- Project 2: Cynx-YouthLink -->
-        <article class="project-card reveal reveal-delay-1" id="project-cynx" aria-label="Cynx-YouthLink project">
+        <!-- Project 3: Cynx-YouthLink -->
+        <article class="project-card reveal reveal-delay-2" id="project-cynx" aria-label="Cynx-YouthLink project">
           <div class="project-card-header">
             <div class="project-icon-badge">
               <i class="fa-solid fa-heart-pulse"></i>
             </div>
             <div class="project-meta-top">
-              <span class="project-number">// 02</span>
+              <span class="project-number">// 03</span>
               <span class="project-status web">Web Platform</span>
             </div>
           </div>
@@ -413,14 +453,14 @@
           </div>
         </article>
 
-        <!-- Project 3: Smart Contracts Escrow -->
-        <article class="project-card reveal reveal-delay-2" id="project-escrow" aria-label="Decentralized Freelance Escrow & Payment Platform">
+        <!-- Project 4: Smart Contracts Escrow -->
+        <article class="project-card reveal reveal-delay-3" id="project-escrow" aria-label="Decentralized Freelance Escrow & Payment Platform">
           <div class="project-card-header">
             <div class="project-icon-badge">
               <i class="fa-solid fa-file-contract"></i>
             </div>
             <div class="project-meta-top">
-              <span class="project-number">// 03</span>
+              <span class="project-number">// 04</span>
               <span class="project-status blockchain">Blockchain</span>
             </div>
           </div>

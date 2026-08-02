@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const phrases = [
     'Software Engineering Student',
     'Full-Stack Developer',
-    'Backend Systems Builder',
+    'AI Systems & Backend Builder',
     'Open Source Contributor'
   ];
 
