@@ -20,6 +20,18 @@ This repository contains a modern, responsive personal portfolio website built w
   `https://mail.google.com/mail/?view=cm&fs=1&to=gampasathwik2220@gmail.com`
 * This bypasses default OS-level mail handlers (such as Windows Outlook) and opens a new compose tab straight in the web browser.
 
+### 4. Engineering Milestones & GitHub Synchronization
+* Added **Smart-Lab-AI Lead Architect (4th Position — AI Hackathon, VNR VJIET)** on October 13, 2026 with gold glowing indicator and award badge.
+* Added **1st Place Winner — "Break Point" Case Study Competition** at **Convergence 2k26 (VNR VJIET)** on September 18–19, 2026 with custom gold glowing dot and award pill.
+* Added **Top Performer** award indicator for **CVR College of Engineering 36-Hour Hackathon (Cynx-YouthLink)** conducted in April 2026.
+* Synchronized active repositories from [GitHub Profile](https://github.com/sathwikgampa?tab=repositories), including **Smart-Lab-AI**, **E-Commerce Store**, **Citizens Platform**, **College Bus Tracking**, **Cynx-YouthLink**, **Smart Contracts**, and open-source tooling.
+* Integrated category filter tabs and real-time status badges with pulse indicators.
+
+### 5. Competitive Programming Profiles & Ratings
+* **LeetCode**: Contest rating **1467** linked to [leetcode.com/u/7yVHCA8Zbn/](https://leetcode.com/u/7yVHCA8Zbn/).
+* **CodeChef**: Contest rating **1385** and **DSA rating 1547** linked to [codechef.com/users/sathwik_1722](https://www.codechef.com/users/sathwik_1722).
+* Added social icon buttons and contact method links for both platforms.
+
 ---
 
 ## Local Development Server

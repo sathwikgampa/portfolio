@@ -243,4 +243,29 @@ document.addEventListener('DOMContentLoaded', () => {
     formFeedback.style.display = 'block';
   }
 
+  /* ── Interactive Project Category Filtering ── */
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card[data-category]');
+
+  if (filterBtns.length > 0 && projectCards.length > 0) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const selectedFilter = btn.getAttribute('data-filter');
+
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        projectCards.forEach(card => {
+          const categories = (card.getAttribute('data-category') || '').split(' ');
+          if (selectedFilter === 'all' || categories.includes(selectedFilter)) {
+            card.classList.remove('is-hidden');
+            card.classList.add('visible');
+          } else {
+            card.classList.add('is-hidden');
+          }
+        });
+      });
+    });
+  }
+
 });

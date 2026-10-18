@@ -8,15 +8,15 @@
   <!-- SEO -->
   <title>Gampa Sathwik — Software Engineer & Systems Architect Portfolio</title>
   <meta name="description"
-    content="Full-Stack & Systems Engineer building multi-agent AI platforms, low-latency WebSocket backends, and event-driven architectures. Proficient in Next.js 15, FastAPI, React, Node.js, and Python." />
+    content="Full-Stack & Systems Engineer building multimodal AI platforms, low-latency WebSocket backends, Web3 smart contracts, and production web applications. Proficient in TypeScript, React, Python, FastAPI, Node.js, and Solidity." />
   <meta name="keywords"
-    content="Gampa Sathwik, Software Engineer, Systems Architect, SDE, React, Next.js 15, FastAPI, Node.js, Solidity, Python, Socket.IO, Redis, Turborepo" />
+    content="Gampa Sathwik, Software Engineer, Systems Architect, SDE, React, Next.js, FastAPI, Node.js, Solidity, Python, Socket.IO, Redis, TypeScript, Smart-Lab-AI, Citizens Platform" />
   <meta name="author" content="Gampa Sathwik" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Gampa Sathwik — Software Engineering & Systems Portfolio" />
   <meta property="og:description"
-    content="Full-Stack & Systems Engineer building multi-agent AI platforms and low-latency distributed architectures." />
+    content="Full-Stack & Systems Engineer building multimodal AI systems, real-time telemetry, Web3 smart contracts, and distributed architectures." />
   <meta property="og:type" content="website" />
 
   <!-- Favicon -->
@@ -85,10 +85,6 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-text reveal">
-          <div class="status-badge" aria-label="Status badge">
-            <span class="status-dot" aria-hidden="true"></span>
-            Available for SDE &amp; Full-Stack Engineering Roles
-          </div>
 
           <h1 class="hero-name">
             Hi, I'm <span>Gampa Sathwik</span>
@@ -113,11 +109,17 @@
             </div>
 
             <div class="hero-social-links" role="list" aria-label="Profile links">
-              <a href="https://github.com/sathwikgampa/" target="_blank" rel="noopener" class="social-icon-btn" id="hero-github-link" role="listitem" aria-label="GitHub profile">
+              <a href="https://github.com/sathwikgampa/" target="_blank" rel="noopener" class="social-icon-btn" id="hero-github-link" role="listitem" aria-label="GitHub profile" title="GitHub Profile">
                 <i class="fa-brands fa-github"></i>
               </a>
-              <a href="https://www.linkedin.com/in/sathwik-gampa" target="_blank" rel="noopener" class="social-icon-btn" id="hero-linkedin-link" role="listitem" aria-label="LinkedIn profile">
+              <a href="https://www.linkedin.com/in/sathwik-gampa" target="_blank" rel="noopener" class="social-icon-btn" id="hero-linkedin-link" role="listitem" aria-label="LinkedIn profile" title="LinkedIn Profile">
                 <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://leetcode.com/u/7yVHCA8Zbn/" target="_blank" rel="noopener" class="social-icon-btn" id="hero-leetcode-link" role="listitem" aria-label="LeetCode profile" title="LeetCode Profile (Rating: 1467)">
+                <i class="fa-solid fa-code"></i>
+              </a>
+              <a href="https://www.codechef.com/users/sathwik_1722" target="_blank" rel="noopener" class="social-icon-btn" id="hero-codechef-link" role="listitem" aria-label="CodeChef profile" title="CodeChef Profile (Rating: 1385 | DSA: 1547)">
+                <i class="fa-solid fa-terminal"></i>
               </a>
             </div>
           </div>
@@ -125,17 +127,22 @@
           <!-- Stats -->
           <div class="hero-stats" role="list" aria-label="Portfolio statistics">
             <div class="hero-stat" role="listitem">
-              <span class="hero-stat-num" id="stat-projects" data-target="13" data-suffix="+">13+</span>
+              <span class="hero-stat-num" id="stat-projects" data-target="16" data-suffix="+">16+</span>
               <span class="hero-stat-label">Projects Built</span>
             </div>
             <div class="hero-stat" role="listitem">
-              <span class="hero-stat-num" id="stat-commits" data-target="300" data-suffix="+">300+</span>
+              <span class="hero-stat-num" id="stat-commits" data-target="400" data-suffix="+">400+</span>
               <span class="hero-stat-label">Git Commits</span>
             </div>
-            <div class="hero-stat" role="listitem">
-              <span class="hero-stat-num" id="stat-problems" data-target="1412" data-suffix="">1412</span>
+            <a href="https://leetcode.com/u/7yVHCA8Zbn/" target="_blank" rel="noopener" class="hero-stat" role="listitem" style="text-decoration: none; color: inherit;" title="View LeetCode Profile">
+              <span class="hero-stat-num" id="stat-leetcode" data-target="1467" data-suffix="">1467</span>
               <span class="hero-stat-label">LeetCode Rating</span>
-            </div>
+            </a>
+            <a href="https://www.codechef.com/users/sathwik_1722" target="_blank" rel="noopener" class="hero-stat" role="listitem" style="text-decoration: none; color: inherit;" title="View CodeChef Profile (DSA: 1547)">
+              <span class="hero-stat-num" id="stat-codechef" data-target="1385" data-suffix="">1385</span>
+              <span class="hero-stat-label">CodeChef Rating</span>
+              <span class="hero-stat-sub">DSA 1547</span>
+            </a>
           </div>
         </div>
 
@@ -155,76 +162,143 @@
       <div class="section-header reveal">
         <span class="section-label">Featured Work</span>
         <h2 class="section-title">Production Systems &amp; Architectures</h2>
-        <p class="section-subtitle">Real-world implementations demonstrating multi-agent AI execution, spatial pathfinding, low-latency WebSockets, and zero-trust contracts.</p>
+        <p class="section-subtitle">Real-world implementations from my GitHub profile demonstrating multimodal AI, spatial telemetry, low-latency WebSockets, zero-trust smart contracts, and civic governance.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="project-filters reveal" role="tablist" aria-label="Filter projects by category">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true"><i class="fa-solid fa-layer-group"></i> All Projects (8)</button>
+        <button class="filter-btn" data-filter="ai" role="tab" aria-selected="false"><i class="fa-solid fa-brain"></i> AI &amp; Systems</button>
+        <button class="filter-btn" data-filter="telemetry" role="tab" aria-selected="false"><i class="fa-solid fa-satellite-dish"></i> Distributed &amp; IoT</button>
+        <button class="filter-btn" data-filter="fullstack" role="tab" aria-selected="false"><i class="fa-solid fa-cart-shopping"></i> Full-Stack &amp; E-Commerce</button>
+        <button class="filter-btn" data-filter="web3" role="tab" aria-selected="false"><i class="fa-solid fa-cube"></i> Web3 &amp; Blockchain</button>
+        <button class="filter-btn" data-filter="civic" role="tab" aria-selected="false"><i class="fa-solid fa-users"></i> Civic &amp; Health Tech</button>
       </div>
 
       <div class="projects-grid">
-        <!-- Project 1: FounderHQ -->
-        <article class="project-card reveal" id="project-founderhq" aria-label="FounderHQ Autonomous AI Operating System">
+        <!-- Project 1: Smart-Lab-AI -->
+        <article class="project-card reveal" id="project-smartlab" data-category="ai" aria-label="Smart-Lab-AI Multimodal Laboratory Operations Assistant">
           <div class="project-card-header">
             <div class="project-icon-badge">
               <i class="fa-solid fa-brain" aria-hidden="true"></i>
             </div>
             <div class="project-meta-top">
               <span class="project-number">// 01</span>
-              <span class="project-status" style="background: rgba(37, 99, 235, 0.15); color: #3b82f6; border-color: rgba(59, 130, 246, 0.3);">AI Monorepo</span>
+              <span class="project-status live"><span class="pulse-dot"></span>Live App</span>
             </div>
           </div>
 
           <div class="project-card-body">
-            <h3 class="project-title">FounderHQ — Autonomous AI Operating System</h3>
+            <h3 class="project-title">Smart-Lab-AI — Multimodal Lab Co-Pilot &amp; Operations</h3>
             
             <div class="arch-badge-container">
-              <span class="arch-badge"><i class="fa-solid fa-diagram-project"></i> Multi-Agent DAG Execution</span>
-              <span class="arch-badge"><i class="fa-solid fa-bolt"></i> Async Pydantic v2 Pipeline</span>
-              <span class="arch-badge"><i class="fa-solid fa-server"></i> Turborepo Monorepo</span>
+              <span class="arch-badge" style="background: rgba(245, 158, 11, 0.12); color: #fbbf24; border-color: rgba(245, 158, 11, 0.35);"><i class="fa-solid fa-award"></i> 4th Position &bull; AI Hackathon</span>
+              <span class="arch-badge"><i class="fa-solid fa-microchip"></i> Zero-Hallucination RAG</span>
+              <span class="arch-badge"><i class="fa-solid fa-calculator"></i> Deterministic Molarity Math</span>
+              <span class="arch-badge"><i class="fa-solid fa-camera"></i> CV Hardware Diagnostics</span>
             </div>
 
             <p class="project-desc">
-              Autonomous AI Co-Founder platform orchestrating multi-agent DAG execution graphs across Finance, Legal, HR, and Growth. Eliminates operational bottlenecks via structured Pydantic LLM validation, real-time voice streaming, and context RAG retention.
+              Multimodal Laboratory Knowledge &amp; Operations Assistant. Autonomous lab co-pilot with zero-hallucination domain RAG, deterministic chemical molarity math, safety guardrails, computer vision hardware diagnostics, and a full wet-lab digital workspace.
             </p>
 
             <div class="project-metrics">
               <div class="metric-item">
-                <span class="metric-val">&lt;85ms</span>
-                <span class="metric-lbl">Agent Gateway Latency</span>
+                <span class="metric-val">Zero-Hallucination</span>
+                <span class="metric-lbl">Domain RAG Guardrails</span>
               </div>
               <div class="metric-item">
-                <span class="metric-val">100%</span>
-                <span class="metric-lbl">Strict TypeScript Compliance</span>
+                <span class="metric-val">&lt;120ms</span>
+                <span class="metric-lbl">Multimodal Diagnostics</span>
               </div>
             </div>
 
             <div class="project-stack" role="list" aria-label="Tech stack">
-              <span class="stack-tag">Next.js 15</span>
+              <span class="stack-tag">Python</span>
               <span class="stack-tag">FastAPI</span>
               <span class="stack-tag">Google Gemini</span>
-              <span class="stack-tag">TypeScript</span>
-              <span class="stack-tag">Turborepo</span>
-              <span class="stack-tag">Tailwind</span>
+              <span class="stack-tag">RAG</span>
+              <span class="stack-tag">OpenCV</span>
+              <span class="stack-tag">Streamlit</span>
               <span class="stack-tag">Pydantic</span>
             </div>
           </div>
 
           <div class="project-card-footer">
-            <a href="https://founderhq-web.onrender.com" target="_blank" rel="noopener" class="project-link btn-primary-cta" id="proj0-demo-btn" aria-label="View live demo of FounderHQ">
+            <a href="https://smart-lab-ai.onrender.com" target="_blank" rel="noopener" class="project-link btn-primary-cta" id="proj-smartlab-demo" aria-label="View live demo of Smart-Lab-AI">
               Launch Live App <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
-            <a href="https://github.com/sathwikgampa/FounderHq" target="_blank" rel="noopener" class="project-link btn-secondary-cta" id="proj0-github-btn" aria-label="View FounderHQ code on GitHub">
+            <a href="https://github.com/sathwikgampa/Smart-Lab-AI-" target="_blank" rel="noopener" class="project-link btn-secondary-cta" id="proj-smartlab-github" aria-label="View Smart-Lab-AI code on GitHub">
               Inspect Code <i class="fa-solid fa-code"></i>
             </a>
           </div>
         </article>
 
-        <!-- Project 2: College Bus Tracking -->
-        <article class="project-card reveal reveal-delay-1" id="project-bus" aria-label="High-Concurrency Bus Telemetry System">
+        <!-- Project 2: E-Commerce Store -->
+        <article class="project-card reveal reveal-delay-1" id="project-ecommerce" data-category="fullstack" aria-label="Modern E-Commerce and Logistics Store">
+          <div class="project-card-header">
+            <div class="project-icon-badge">
+              <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+            </div>
+            <div class="project-meta-top">
+              <span class="project-number">// 02</span>
+              <span class="project-status web"><span class="pulse-dot"></span>Production Ready</span>
+            </div>
+          </div>
+
+          <div class="project-card-body">
+            <h3 class="project-title">Modern E-Commerce Store &amp; Logistics Platform</h3>
+            
+            <div class="arch-badge-container">
+              <span class="arch-badge"><i class="fa-solid fa-truck-fast"></i> Store Pickup &amp; Deliveries</span>
+              <span class="arch-badge"><i class="fa-solid fa-user-shield"></i> Role-Based Auth Engine</span>
+              <span class="arch-badge"><i class="fa-solid fa-database"></i> Automated Catalog Inventory</span>
+            </div>
+
+            <p class="project-desc">
+              Comprehensive full-stack e-commerce architecture offering local store pickup and delivery management. Engineered with a responsive UI, secure user/admin authorization tiers, and complete dynamic catalog inventory workflows.
+            </p>
+
+            <div class="project-metrics">
+              <div class="metric-item">
+                <span class="metric-val">100%</span>
+                <span class="metric-lbl">Strict TypeScript</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val">Multi-Tier</span>
+                <span class="metric-lbl">Role Authorization</span>
+              </div>
+            </div>
+
+            <div class="project-stack" role="list" aria-label="Tech stack">
+              <span class="stack-tag">TypeScript</span>
+              <span class="stack-tag">React</span>
+              <span class="stack-tag">Node.js</span>
+              <span class="stack-tag">Express</span>
+              <span class="stack-tag">TailwindCSS</span>
+              <span class="stack-tag">PostgreSQL</span>
+            </div>
+          </div>
+
+          <div class="project-card-footer">
+            <a href="https://github.com/sathwikgampa/E-Commerce-Store" target="_blank" rel="noopener" class="project-link btn-primary-cta" id="proj-ecommerce-github-main" aria-label="View E-Commerce Store repository on GitHub">
+              View Repository <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://github.com/sathwikgampa/E-Commerce-Store#readme" target="_blank" rel="noopener" class="project-link btn-secondary-cta" id="proj-ecommerce-inspect" aria-label="Inspect E-Commerce Architecture">
+              Inspect Code <i class="fa-solid fa-code"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3: College Bus Tracking -->
+        <article class="project-card reveal reveal-delay-2" id="project-bus" data-category="telemetry" aria-label="High-Concurrency Bus Telemetry System">
           <div class="project-card-header">
             <div class="project-icon-badge">
               <i class="fa-solid fa-bus" aria-hidden="true"></i>
             </div>
             <div class="project-meta-top">
-              <span class="project-number">// 02</span>
-              <span class="project-status">Distributed Telemetry</span>
+              <span class="project-number">// 03</span>
+              <span class="project-status live"><span class="pulse-dot"></span>Live Production</span>
             </div>
           </div>
 
@@ -238,7 +312,7 @@
             </div>
 
             <p class="project-desc">
-              Low-latency transit monitoring platform replacing manual logging with automated attendance verification. Streamlines high-frequency GPS coordinate broadcasts across mobile driver applications and web map clients.
+              Production-grade transit monitoring platform replacing manual logging with automated RFID/GPS attendance verification. Streamlines high-frequency GPS coordinate broadcasts across mobile driver applications and web map clients.
             </p>
 
             <div class="project-metrics">
@@ -273,15 +347,72 @@
           </div>
         </article>
 
-        <!-- Project 3: Cynx-YouthLink -->
-        <article class="project-card reveal reveal-delay-2" id="project-cynx" aria-label="Cynx-YouthLink project">
+        <!-- Project 4: Citizens Platform -->
+        <article class="project-card reveal reveal-delay-3" id="project-citizens" data-category="civic" aria-label="Citizens Platform Civic Grievance System">
+          <div class="project-card-header">
+            <div class="project-icon-badge">
+              <i class="fa-solid fa-users-gear" aria-hidden="true"></i>
+            </div>
+            <div class="project-meta-top">
+              <span class="project-number">// 04</span>
+              <span class="project-status live"><span class="pulse-dot"></span>Live App</span>
+            </div>
+          </div>
+
+          <div class="project-card-body">
+            <h3 class="project-title">Citizens Platform — Civic Grievance &amp; Governance</h3>
+            
+            <div class="arch-badge-container">
+              <span class="arch-badge"><i class="fa-solid fa-location-dot"></i> Geo-Tagged Grievance Triage</span>
+              <span class="arch-badge"><i class="fa-solid fa-chart-line"></i> Ward Performance Dashboards</span>
+              <span class="arch-badge"><i class="fa-solid fa-check-to-slot"></i> Participatory Project Polling</span>
+            </div>
+
+            <p class="project-desc">
+              Decentralized grievance management platform where citizens submit geo-tagged municipal issues (potholes, garbage, water leaks), track real-time resolution status, and access ward-level municipal performance analytics with community polling.
+            </p>
+
+            <div class="project-metrics">
+              <div class="metric-item">
+                <span class="metric-val">Geo-Tagged</span>
+                <span class="metric-lbl">Grievance Pipeline</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val">Ward-Wise</span>
+                <span class="metric-lbl">Resolution Analytics</span>
+              </div>
+            </div>
+
+            <div class="project-stack" role="list" aria-label="Tech stack">
+              <span class="stack-tag">React</span>
+              <span class="stack-tag">JavaScript</span>
+              <span class="stack-tag">Node.js</span>
+              <span class="stack-tag">Express</span>
+              <span class="stack-tag">GeoJSON</span>
+              <span class="stack-tag">Leaflet</span>
+              <span class="stack-tag">Vercel</span>
+            </div>
+          </div>
+
+          <div class="project-card-footer">
+            <a href="https://citizens-platform.vercel.app/" target="_blank" rel="noopener" class="project-link btn-primary-cta" id="proj-citizens-demo-btn" aria-label="View live demo of Citizens Platform">
+              Launch Live App <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://github.com/sathwikgampa/Citizens_Platform" target="_blank" rel="noopener" class="project-link btn-secondary-cta" id="proj-citizens-github-btn" aria-label="View Citizens Platform code on GitHub">
+              Inspect Code <i class="fa-solid fa-code"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 5: Cynx-YouthLink -->
+        <article class="project-card reveal" id="project-cynx" data-category="civic" aria-label="Cynx-YouthLink Mental Health Ecosystem">
           <div class="project-card-header">
             <div class="project-icon-badge">
               <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
             </div>
             <div class="project-meta-top">
-              <span class="project-number">// 03</span>
-              <span class="project-status web">Web Platform</span>
+              <span class="project-number">// 05</span>
+              <span class="project-status live"><span class="pulse-dot"></span>Live App</span>
             </div>
           </div>
 
@@ -289,13 +420,14 @@
             <h3 class="project-title">Cynx-YouthLink (Mental Health Ecosystem)</h3>
             
             <div class="arch-badge-container">
+              <span class="arch-badge" style="background: rgba(245, 158, 11, 0.12); color: #fbbf24; border-color: rgba(245, 158, 11, 0.35);"><i class="fa-solid fa-trophy"></i> Top Performer &bull; CVR 36-Hr Hackathon</span>
               <span class="arch-badge"><i class="fa-solid fa-shield-cat"></i> Sub-50ms Safety Switch</span>
               <span class="arch-badge"><i class="fa-solid fa-comments"></i> WebSockets E2E Messaging</span>
               <span class="arch-badge"><i class="fa-solid fa-brain"></i> FastAPI Sentiment Triage</span>
             </div>
 
             <p class="project-desc">
-              Clinical outreach ecosystem integrating FastAPI sentiment analysis, real-time client messaging, and an instant panic-route redirection trigger for immediate user privacy.
+              Clinical outreach ecosystem integrating FastAPI sentiment analysis, real-time client messaging, and an instant panic-route redirection trigger for immediate user privacy during mental health crises.
             </p>
 
             <div class="project-metrics">
@@ -315,6 +447,7 @@
               <span class="stack-tag">PostgreSQL</span>
               <span class="stack-tag">WebSockets</span>
               <span class="stack-tag">Tailwind</span>
+              <span class="stack-tag">Vercel</span>
             </div>
           </div>
 
@@ -328,15 +461,15 @@
           </div>
         </article>
 
-        <!-- Project 4: Smart Contracts Escrow -->
-        <article class="project-card reveal reveal-delay-3" id="project-escrow" aria-label="Decentralized Freelance Escrow Platform">
+        <!-- Project 6: Smart Contracts Escrow -->
+        <article class="project-card reveal reveal-delay-1" id="project-escrow" data-category="web3" aria-label="Decentralized Freelance Escrow Platform">
           <div class="project-card-header">
             <div class="project-icon-badge">
               <i class="fa-solid fa-file-contract" aria-hidden="true"></i>
             </div>
             <div class="project-meta-top">
-              <span class="project-number">// 04</span>
-              <span class="project-status blockchain">Blockchain</span>
+              <span class="project-number">// 06</span>
+              <span class="project-status blockchain"><span class="pulse-dot"></span>Live On-Chain</span>
             </div>
           </div>
 
@@ -350,13 +483,13 @@
             </div>
 
             <p class="project-desc">
-              Decentralized escrow engine eliminating central commissions through automated Solidity contract ledgers, state-machine validation, and Web3 cryptographic signing.
+              Decentralized escrow engine eliminating central commissions through automated Solidity contract ledgers on Ethereum Sepolia testnet, state-machine validation, and Web3 cryptographic signing.
             </p>
 
             <div class="project-metrics">
               <div class="metric-item">
                 <span class="metric-val">100%</span>
-                <span class="metric-lbl">Zero-Trust Trustless Ledger</span>
+                <span class="metric-lbl">Zero-Trust Escrow</span>
               </div>
               <div class="metric-item">
                 <span class="metric-val">EIP-1193</span>
@@ -382,6 +515,234 @@
             </a>
           </div>
         </article>
+
+        <!-- Project 7: Certification Validation System Web3.0 -->
+        <article class="project-card reveal reveal-delay-2" id="project-web3cert" data-category="web3" aria-label="Web3 Certification Validation System">
+          <div class="project-card-header">
+            <div class="project-icon-badge">
+              <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+            </div>
+            <div class="project-meta-top">
+              <span class="project-number">// 07</span>
+              <span class="project-status blockchain"><span class="pulse-dot"></span>Live On-Chain</span>
+            </div>
+          </div>
+
+          <div class="project-card-body">
+            <h3 class="project-title">Web 3.0 Blockchain Certificate Issuance &amp; Verification</h3>
+            
+            <div class="arch-badge-container">
+              <span class="arch-badge"><i class="fa-solid fa-network-wired"></i> IPFS Storage Pinning</span>
+              <span class="arch-badge"><i class="fa-solid fa-shield-halved"></i> Keccak-256 Hashing</span>
+              <span class="arch-badge"><i class="fa-solid fa-qrcode"></i> Public QR Verification</span>
+            </div>
+
+            <p class="project-desc">
+              Decentralized credential verification system built with Ethereum, IPFS, and React. Prevents academic forgery through immutable cryptographic certificates and provides instant public verification without central gatekeepers.
+            </p>
+
+            <div class="project-metrics">
+              <div class="metric-item">
+                <span class="metric-val">100%</span>
+                <span class="metric-lbl">Anti-Tamper Security</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val">IPFS</span>
+                <span class="metric-lbl">Decentralized Storage</span>
+              </div>
+            </div>
+
+            <div class="project-stack" role="list" aria-label="Tech stack">
+              <span class="stack-tag">Solidity</span>
+              <span class="stack-tag">Ethereum</span>
+              <span class="stack-tag">IPFS</span>
+              <span class="stack-tag">React</span>
+              <span class="stack-tag">Node.js</span>
+              <span class="stack-tag">Web3.js</span>
+            </div>
+          </div>
+
+          <div class="project-card-footer">
+            <a href="https://certification-validation-system-web.vercel.app" target="_blank" rel="noopener" class="project-link btn-primary-cta" id="proj-cert-demo-btn" aria-label="View live demo of Web3 Certificate Validation system">
+              Launch Live App <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://github.com/sathwikgampa/certification-validation-system-web3.0" target="_blank" rel="noopener" class="project-link btn-secondary-cta" id="proj-cert-github-btn" aria-label="View Certification Validation code on GitHub">
+              Inspect Code <i class="fa-solid fa-code"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 8: Legal Metrology AI Inspection -->
+        <article class="project-card reveal reveal-delay-3" id="project-compliance" data-category="ai" aria-label="Legal Metrology AI Inspection System">
+          <div class="project-card-header">
+            <div class="project-icon-badge">
+              <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+            </div>
+            <div class="project-meta-top">
+              <span class="project-number">// 08</span>
+              <span class="project-status ai"><span class="pulse-dot"></span>Active AI System</span>
+            </div>
+          </div>
+
+          <div class="project-card-body">
+            <h3 class="project-title">Legal Metrology AI Inspection &amp; Compliance</h3>
+            
+            <div class="arch-badge-container">
+              <span class="arch-badge"><i class="fa-solid fa-eye"></i> Vision OCR Extraction</span>
+              <span class="arch-badge"><i class="fa-solid fa-gavel"></i> Statutory Rule Engine</span>
+              <span class="arch-badge"><i class="fa-solid fa-file-circle-check"></i> Automated Audit Reports</span>
+            </div>
+
+            <p class="project-desc">
+              Automated compliance verification system designed for packaging and Legal Metrology standards. Analyzes mandatory declarations (MRP, batch numbers, manufacturer info, net weight) using OCR and LLM-assisted verification pipelines.
+            </p>
+
+            <div class="project-metrics">
+              <div class="metric-item">
+                <span class="metric-val">Automated</span>
+                <span class="metric-lbl">Regulatory Auditing</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-val">Multi-Field</span>
+                <span class="metric-lbl">Declaration OCR</span>
+              </div>
+            </div>
+
+            <div class="project-stack" role="list" aria-label="Tech stack">
+              <span class="stack-tag">TypeScript</span>
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">FastAPI</span>
+              <span class="stack-tag">Vision OCR</span>
+              <span class="stack-tag">Pydantic</span>
+              <span class="stack-tag">LLMs</span>
+            </div>
+          </div>
+
+          <div class="project-card-footer">
+            <a href="https://github.com/sathwikgampa/legal-metrology-compliance" target="_blank" rel="noopener" class="project-link btn-primary-cta" id="proj-compliance-github-btn" aria-label="View Legal Metrology Compliance on GitHub">
+              View Repository <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://github.com/sathwikgampa/legal-metrology-compliance#readme" target="_blank" rel="noopener" class="project-link btn-secondary-cta" id="proj-compliance-inspect-btn" aria-label="Inspect Compliance Architecture">
+              Inspect Code <i class="fa-solid fa-code"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <!-- More Repositories Grid from GitHub -->
+      <div class="more-repos-section reveal">
+        <div class="more-repos-header">
+          <h3 class="more-repos-title">More Open-Source Repositories</h3>
+          <p class="more-repos-subtitle">Additional developer tooling, student management systems, data structures, and algorithmic repositories maintained on GitHub.</p>
+        </div>
+
+        <div class="more-repos-grid">
+          <!-- Repo 1: GODMODE -->
+          <div class="repo-card">
+            <div class="repo-card-top">
+              <i class="fa-regular fa-folder-open repo-icon-folder"></i>
+              <span class="project-status live"><span class="pulse-dot"></span>Live</span>
+            </div>
+            <h4 class="repo-card-title"><a href="https://github.com/sathwikgampa/GODMODE-" target="_blank" rel="noopener">GODMODE-</a></h4>
+            <p class="repo-card-desc">High-performance developer workspace and diagnostic monitoring interface optimized for productivity and real-time execution statistics.</p>
+            <div class="repo-card-meta">
+              <span class="repo-card-lang"><span class="lang-dot ts"></span> TypeScript</span>
+              <div class="repo-card-links">
+                <a href="https://godmod3-static.vercel.app/" target="_blank" rel="noopener" title="Launch Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://github.com/sathwikgampa/GODMODE-" target="_blank" rel="noopener" title="GitHub Repo"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repo 2: student-management-system-routing -->
+          <div class="repo-card">
+            <div class="repo-card-top">
+              <i class="fa-regular fa-folder-open repo-icon-folder"></i>
+              <span class="project-status live"><span class="pulse-dot"></span>Live</span>
+            </div>
+            <h4 class="repo-card-title"><a href="https://github.com/sathwikgampa/student-management-system-routing" target="_blank" rel="noopener">Student Management Routing</a></h4>
+            <p class="repo-card-desc">Modular student management portal with dynamic routing, grade book tracking, student directory indexing, and institutional record lookup.</p>
+            <div class="repo-card-meta">
+              <span class="repo-card-lang"><span class="lang-dot js"></span> JavaScript</span>
+              <div class="repo-card-links">
+                <a href="https://student-management-system-routing-24uc2gb2s.vercel.app" target="_blank" rel="noopener" title="Launch Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://github.com/sathwikgampa/student-management-system-routing" target="_blank" rel="noopener" title="GitHub Repo"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repo 3: ArcMentor -->
+          <div class="repo-card">
+            <div class="repo-card-top">
+              <i class="fa-regular fa-folder-open repo-icon-folder"></i>
+              <span class="project-status web">Active</span>
+            </div>
+            <h4 class="repo-card-title"><a href="https://github.com/sathwikgampa/ArcMentor" target="_blank" rel="noopener">ArcMentor</a></h4>
+            <p class="repo-card-desc">Architectural guidance system assisting software engineers in structural system design, design pattern selection, and distributed workflow modeling.</p>
+            <div class="repo-card-meta">
+              <span class="repo-card-lang"><span class="lang-dot ts"></span> TypeScript</span>
+              <div class="repo-card-links">
+                <a href="https://github.com/sathwikgampa/ArcMentor" target="_blank" rel="noopener" title="GitHub Repo"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repo 4: dsa-practice -->
+          <div class="repo-card">
+            <div class="repo-card-top">
+              <i class="fa-regular fa-folder-open repo-icon-folder"></i>
+              <span class="project-status completed">Maintained</span>
+            </div>
+            <h4 class="repo-card-title"><a href="https://github.com/sathwikgampa/dsa-practice" target="_blank" rel="noopener">DSA Practice &amp; Patterns</a></h4>
+            <p class="repo-card-desc">Curated repository of 100+ algorithmic solutions, dynamic programming patterns, graph traversal routines (Dijkstra, BFS/DFS), and clean object-oriented data structures.</p>
+            <div class="repo-card-meta">
+              <span class="repo-card-lang"><span class="lang-dot java"></span> Java</span>
+              <div class="repo-card-links">
+                <a href="https://github.com/sathwikgampa/dsa-practice" target="_blank" rel="noopener" title="GitHub Repo"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repo 5: resume-matcher -->
+          <div class="repo-card">
+            <div class="repo-card-top">
+              <i class="fa-regular fa-folder-open repo-icon-folder"></i>
+              <span class="project-status web">Utility</span>
+            </div>
+            <h4 class="repo-card-title"><a href="https://github.com/sathwikgampa/resume-matcher" target="_blank" rel="noopener">Resume Matcher Engine</a></h4>
+            <p class="repo-card-desc">Java-based resume screening system performing keyword extraction, candidate skill matching, and role fit analysis against engineering job descriptions.</p>
+            <div class="repo-card-meta">
+              <span class="repo-card-lang"><span class="lang-dot java"></span> Java</span>
+              <div class="repo-card-links">
+                <a href="https://github.com/sathwikgampa/resume-matcher" target="_blank" rel="noopener" title="GitHub Repo"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repo 6: Catalyst-Os -->
+          <div class="repo-card">
+            <div class="repo-card-top">
+              <i class="fa-regular fa-folder-open repo-icon-folder"></i>
+              <span class="project-status ai">Systems</span>
+            </div>
+            <h4 class="repo-card-title"><a href="https://github.com/sathwikgampa/Catalyst-Os" target="_blank" rel="noopener">Catalyst-Os</a></h4>
+            <p class="repo-card-desc">Exploratory systems programming workspace in Python focusing on process schedulers, memory allocation simulations, and virtualized OS routines.</p>
+            <div class="repo-card-meta">
+              <span class="repo-card-lang"><span class="lang-dot py"></span> Python</span>
+              <div class="repo-card-links">
+                <a href="https://github.com/sathwikgampa/Catalyst-Os" target="_blank" rel="noopener" title="GitHub Repo"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Official GitHub Banner Callout -->
+        <div class="github-showcase-banner">
+          <p class="github-showcase-text">Looking for full commit histories, fork contributions, and upcoming projects?</p>
+          <a href="https://github.com/sathwikgampa?tab=repositories" target="_blank" rel="noopener" class="github-showcase-btn">
+            <i class="fa-brands fa-github"></i> View All 16+ Repositories on GitHub
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -399,36 +760,56 @@
       </div>
 
       <div class="timeline">
-        <!-- Milestone 1 -->
+        <!-- Milestone: AI Hackathon 4th Position (Smart-Lab-AI) -->
         <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-time">Oct 2024 - Present</div>
-          <h3 class="timeline-title">Hackathon Project Lead &amp; SDE</h3>
-          <div class="timeline-org">CVR College Hackathon (Top Performer)</div>
+          <div class="timeline-dot award"></div>
+          <div class="timeline-time">October 13, 2026</div>
+          <h3 class="timeline-title">
+            Smart-Lab-AI Lead Architect
+            <span class="timeline-award-badge"><i class="fa-solid fa-award"></i> 4th Position</span>
+          </h3>
+          <div class="timeline-org">AI Hackathon &bull; VNR VJIET (4th Position)</div>
           <p class="timeline-desc">
-            Led a core engineering team to conceptualize, design, and deploy Cynx-YouthLink (a real-time mental health ecosystem). Engineered WebSockets messaging backends, FastAPI endpoints for triage analysis, and integrated security fail-safes such as emergency route exits.
+            Architected and shipped Smart-Lab-AI during the competitive AI Hackathon hosted by VNR VJIET on October 13, 2026, securing 4th position. Engineered an autonomous multimodal laboratory assistant with zero-hallucination domain RAG, deterministic molarity math, chemical safety guardrails, and computer vision hardware diagnostics. Deployed live on Render.
           </p>
         </div>
 
-        <!-- Milestone 2 -->
+        <!-- Milestone: 1st Place Break Point Case Study Winner -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot award"></div>
+          <div class="timeline-time">September 18–19, 2026</div>
+          <h3 class="timeline-title">
+            1st Place Winner — "Break Point" Case Study Competition
+            <span class="timeline-award-badge"><i class="fa-solid fa-trophy"></i> 1st Place</span>
+          </h3>
+          <div class="timeline-org">Convergence 2k26 &bull; VNR VJIET</div>
+          <p class="timeline-desc">
+            Secured 1st place in the flagship "Break Point" case study competition at Convergence 2k26, hosted by VNR VJIET. Rigorously analyzed complex technical and organizational case scenarios over a demanding two-day event, formulating strategic engineering solutions and presenting high-conviction defenses before the evaluation panel.
+          </p>
+        </div>
+
+        <!-- Milestone: CVR Hackathon Top Performer -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot award"></div>
+          <div class="timeline-time">April 2026</div>
+          <h3 class="timeline-title">
+            Hackathon Project Lead &amp; SDE
+            <span class="timeline-award-badge"><i class="fa-solid fa-trophy"></i> Top Performer</span>
+          </h3>
+          <div class="timeline-org">CVR College of Engineering &bull; 36-Hour Hackathon</div>
+          <p class="timeline-desc">
+            Participated in my first inter-college hackathon &mdash; an intensive 36-hour innovation marathon hosted at CVR College of Engineering, earning Top Performer honors. Led the core engineering team to conceptualize, design, and deploy Cynx-YouthLink (a real-time mental health ecosystem), engineering WebSocket messaging backends, FastAPI triage analysis, and sub-50ms emergency escape routes.
+          </p>
+        </div>
+
+        <!-- Milestone: Open Source Contributor -->
         <div class="timeline-item reveal">
           <div class="timeline-dot"></div>
           <div class="timeline-time">2023 - Present</div>
           <h3 class="timeline-title">Open Source Contributor</h3>
           <div class="timeline-org">GitHub Community</div>
           <p class="timeline-desc">
-            Contributed to public repositories, focusing on modular architecture, API designs, and database performance optimizations. Authored technical README setups and codebase flow documentation, completing over 300 commits on personal and shared repositories.
-          </p>
-        </div>
-
-        <!-- Milestone 3 -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-time">2024 - Present</div>
-          <h3 class="timeline-title">FounderHQ Lead Architect</h3>
-          <div class="timeline-org">Autonomous Systems</div>
-          <p class="timeline-desc">
-            Architected and shipped FounderHQ, a production-grade multi-agent autonomous system using Next.js 15, FastAPI, and Turborepo. Designed Pydantic LLM validation pipelines and real-time voice streaming workflows.
+            Contributed to public repositories, focusing on modular architecture, API designs, and database performance optimizations. Authored technical README setups and codebase flow documentation, completing over 400 commits on personal and shared repositories.
           </p>
         </div>
       </div>
@@ -448,7 +829,7 @@
       </div>
 
       <div class="skills-grid">
-        <!-- Programming Languages -->
+        <!-- Languages -->
         <div class="skill-card reveal">
           <i class="fa-solid fa-code skill-card-icon"></i>
           <h3 class="skill-card-title">Languages</h3>
@@ -456,56 +837,66 @@
             <span class="skill-tag" role="listitem">Java</span>
             <span class="skill-tag" role="listitem">Python</span>
             <span class="skill-tag" role="listitem">JavaScript</span>
-            <span class="skill-tag" role="listitem">TypeScript</span>
-            <span class="skill-tag" role="listitem">Solidity</span>
-            <span class="skill-tag" role="listitem">C</span>
             <span class="skill-tag" role="listitem">SQL</span>
           </div>
         </div>
 
-        <!-- Frameworks & Libraries -->
+        <!-- Frontend -->
         <div class="skill-card reveal reveal-delay-1">
-          <i class="fa-solid fa-layer-group skill-card-icon"></i>
-          <h3 class="skill-card-title">Frameworks &amp; Libraries</h3>
+          <i class="fa-solid fa-laptop-code skill-card-icon"></i>
+          <h3 class="skill-card-title">Frontend</h3>
           <div class="skill-tags" role="list">
-            <span class="skill-tag" role="listitem">React.js</span>
-            <span class="skill-tag" role="listitem">Next.js 15</span>
-            <span class="skill-tag" role="listitem">FastAPI</span>
-            <span class="skill-tag" role="listitem">Google Gemini AI</span>
-            <span class="skill-tag" role="listitem">Node.js</span>
-            <span class="skill-tag" role="listitem">Turborepo</span>
-            <span class="skill-tag" role="listitem">Express.js</span>
-            <span class="skill-tag" role="listitem">Socket.IO</span>
-            <span class="skill-tag" role="listitem">Ethers.js</span>
+            <span class="skill-tag" role="listitem">React</span>
+            <span class="skill-tag" role="listitem">HTML</span>
+            <span class="skill-tag" role="listitem">CSS</span>
+            <span class="skill-tag" role="listitem">TypeScript</span>
           </div>
         </div>
 
-        <!-- Databases & Infrastructure Tools -->
+        <!-- Backend -->
         <div class="skill-card reveal reveal-delay-2">
+          <i class="fa-solid fa-server skill-card-icon"></i>
+          <h3 class="skill-card-title">Backend</h3>
+          <div class="skill-tags" role="list">
+            <span class="skill-tag" role="listitem">Node.js</span>
+            <span class="skill-tag" role="listitem">REST APIs</span>
+            <span class="skill-tag" role="listitem">Flask</span>
+            <span class="skill-tag" role="listitem">FastAPI</span>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-card reveal reveal-delay-3">
           <i class="fa-solid fa-database skill-card-icon"></i>
-          <h3 class="skill-card-title">Databases &amp; Tools</h3>
+          <h3 class="skill-card-title">Databases</h3>
           <div class="skill-tags" role="list">
             <span class="skill-tag" role="listitem">PostgreSQL</span>
             <span class="skill-tag" role="listitem">MySQL</span>
             <span class="skill-tag" role="listitem">SQLite</span>
-            <span class="skill-tag" role="listitem">Redis</span>
-            <span class="skill-tag" role="listitem">MongoDB</span>
             <span class="skill-tag" role="listitem">Firebase</span>
-            <span class="skill-tag" role="listitem">Git &amp; GitHub</span>
           </div>
         </div>
 
-        <!-- Computer Science Fundamentals -->
-        <div class="skill-card reveal reveal-delay-3">
-          <i class="fa-solid fa-gears skill-card-icon"></i>
-          <h3 class="skill-card-title">CS Fundamentals</h3>
+        <!-- Developer Tools -->
+        <div class="skill-card reveal">
+          <i class="fa-solid fa-screwdriver-wrench skill-card-icon"></i>
+          <h3 class="skill-card-title">Developer Tools</h3>
           <div class="skill-tags" role="list">
-            <span class="skill-tag" role="listitem">Data Structures &amp; Algorithms</span>
-            <span class="skill-tag" role="listitem">OOP Design</span>
-            <span class="skill-tag" role="listitem">Database Systems</span>
-            <span class="skill-tag" role="listitem">Operating Systems</span>
-            <span class="skill-tag" role="listitem">System Design Principles</span>
+            <span class="skill-tag" role="listitem">Git</span>
+            <span class="skill-tag" role="listitem">GitHub</span>
+            <span class="skill-tag" role="listitem">Docker</span>
+            <span class="skill-tag" role="listitem">Postman</span>
           </div>
+        </div>
+
+        <!-- Cloud -->
+        <div class="skill-card reveal reveal-delay-1">
+          <i class="fa-solid fa-cloud skill-card-icon"></i>
+          <h3 class="skill-card-title">Cloud</h3>
+          <div class="skill-tags" role="list">
+            <span class="skill-tag" role="listitem">AWS</span>
+          </div>
+          <p class="skill-card-note">AWS &mdash; learning and building practical projects</p>
         </div>
       </div>
     </div>
@@ -631,6 +1022,14 @@
             <a href="https://www.linkedin.com/in/sathwik-gampa" target="_blank" rel="noopener" class="contact-method" id="contact-linkedin-btn" aria-label="Visit Gampa Sathwik LinkedIn profile">
               <i class="fa-brands fa-linkedin"></i>
               linkedin.com/in/sathwik-gampa
+            </a>
+            <a href="https://leetcode.com/u/7yVHCA8Zbn/" target="_blank" rel="noopener" class="contact-method" id="contact-leetcode-btn" aria-label="Visit Gampa Sathwik LeetCode profile">
+              <i class="fa-solid fa-code"></i>
+              leetcode.com/u/7yVHCA8Zbn
+            </a>
+            <a href="https://www.codechef.com/users/sathwik_1722" target="_blank" rel="noopener" class="contact-method" id="contact-codechef-btn" aria-label="Visit Gampa Sathwik CodeChef profile">
+              <i class="fa-solid fa-terminal"></i>
+              codechef.com/users/sathwik_1722
             </a>
           </div>
         </div>
